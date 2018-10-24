@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#232323"
+    android:orientation="vertical"
+    tools:context="com.goharshad.arena.sakoo.AnswerSheet">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/anstoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#232323"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/anstitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="@dimen/activity_name_mr"
+                android:text="پاسخنامه"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/activity_name_size" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"></View>
+
+        <LinearLayout
+            android:id="@+id/answer_sheet_new_test"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/answer_sheet_new_test_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:text="آزمون جدید"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="28dp" />
+
+                <TextView
+                    android:id="@+id/answer_sheet_new_test_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:text="برای ایجاد پاسخنامه جدید از اینجا شروع کن"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14.5dp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="18.5dp"
+                android:layout_weight="1.5"
+                android:src="@drawable/add_page" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/answer_sheet_gozaresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/answer_sheet_record_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:text="گزارش"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="28dp" />
+
+                <TextView
+                    android:id="@+id/answer_sheet_record_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:text="نتیجه آزمون های قبلی رو از اینجا ببین"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14.5dp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="18.5dp"
+                android:layout_weight="1.5"
+                android:src="@drawable/analysis" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+    <!--<RelativeLayout--><!--android:id="@+id/answer_sheet_new_test"--><!--android:layout_width="match_parent"--><!--android:layout_height="0dp"--><!--android:layout_weight="5"--><!--android:layout_marginTop="50dp"--><!--android:orientation="horizontal"--><!--android:gravity="right">--><!--<ImageButton--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:id="@+id/new_test"--><!--android:src="@drawable/ic_answersheet_new_exam"--><!--android:background="@android:color/transparent"--><!--android:layout_alignParentRight="true"--><!--android:layout_marginRight="30dp"--><!--android:layout_centerVertical="true"/>--><!--<TextView--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:text="آزمون جدید"--><!--android:textColor="#FFF"--><!--android:textSize="30sp"--><!--android:layout_gravity="right"--><!--android:paddingRight="30dp"--><!--android:layout_alignTop="@+id/new_test"--><!--android:layout_toLeftOf="@+id/new_test"--><!--android:layout_marginRight="12dp"--><!--android:id="@+id/textView" />--><!--<TextView--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:text="برای ایجاد پاسخنامه جدید اینجا شروع کن."--><!--android:lines="2"--><!--android:textColor="#FFF"--><!--android:textSize="20sp"--><!--android:layout_gravity="right"--><!--android:paddingRight="30dp"--><!--android:layout_below="@+id/textView"--><!--android:layout_toLeftOf="@+id/new_test"--><!--android:layout_marginTop="16dp"--><!--android:layout_marginLeft="10dp"/>-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout--><!--android:id="@+id/answer_sheet_gozaresh"--><!--android:layout_width="match_parent"--><!--android:layout_height="0dp"--><!--android:layout_weight="5"--><!--android:layout_marginTop="50dp"--><!--android:orientation="horizontal"--><!--android:gravity="right">--><!--<ImageButton--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:id="@+id/report"--><!--android:src="@drawable/ic_answersheet_record"--><!--android:background="@android:color/transparent"--><!--android:layout_marginRight="28dp"--><!--android:layout_alignParentTop="true"--><!--android:layout_alignParentRight="true"--><!--android:layout_marginEnd="28dp"--><!--android:layout_marginTop="11dp" />--><!--<TextView--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:text="گزارش"--><!--android:textColor="#FFF"--><!--android:textSize="30sp"--><!--android:layout_gravity="right"--><!--android:paddingRight="30dp"--><!--android:layout_alignTop="@+id/report"--><!--android:layout_toLeftOf="@+id/report"--><!--android:layout_marginRight="10dp"--><!--android:layout_marginEnd="10dp"--><!--android:id="@+id/textView2" />--><!--<TextView--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:text="نتیجه آزمون‌های قبلی رو از اینجا ببین."--><!--android:lines="2"--><!--android:textColor="#FFF"--><!--android:textSize="20sp"--><!--android:layout_gravity="right"--><!--android:paddingRight="30dp"--><!--android:layout_below="@+id/textView2"--><!--android:layout_toLeftOf="@+id/report"--><!--android:layout_marginTop="14dp"--><!--android:layout_marginLeft="10dp"/>-->
+
+
+    <!--</RelativeLayout>-->
+
+    <!--</LinearLayout>-->

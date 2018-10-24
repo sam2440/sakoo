@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.goharshad.arena.sakoo.StartExam">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/ansstartexamtoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#232323">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/start_test_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/activity_name_size"
+                android:layout_marginRight="@dimen/activity_name_mr"/>
+
+            <TextView
+                android:id="@+id/start_test_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="زمان آزمون"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/menu_text_Large"
+                android:textStyle="bold"
+                android:paddingRight="13dp"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/start_test_questions_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6.25">
+
+            <LinearLayout
+                android:id="@+id/start_test_questions_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"></LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/start_test_tamom_shod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" تموم شد"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:background="#14e90d" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.goharshad.arena.sakoo.AddNewWord">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/laytner_new_word_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activity_lightner_add_new_name_1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:text="@string/activity_lightner_buy_new_name_1"
+                android:textColor="@color/colorWhite"
+                android:gravity="center_vertical|right"
+                android:textSize="13.5dp"
+                android:layout_marginRight="@dimen/activity_name_mr"/>
+
+            <TextView
+                android:id="@+id/activity_lightner_add_new_name_2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/activity_lightner_add_new_name"
+                android:textColor="@color/colorWhite"
+                android:gravity="top|right"
+                android:textSize="11dp"
+                android:layout_marginRight="@dimen/activity_name_mr"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#faeaea"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorOrangeDark"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/add_word_remain_papers"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/activity_name_ml"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"/>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/activity_name_mr"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="برگه های باقی مانده : "
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_weight="6">
+
+            <TextView
+                android:id="@+id/add_new_word_txt_header_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorGreenDark"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="روی برگه (سوال)"
+                android:textColor="#ffffff"
+                android:textSize="13dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/add_word_word_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/add_new_word_txt_header_1"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:hint="تایپ کنید..."
+                android:textColor="@color/colorDark_1"
+                android:textColorHint="@color/colorDark_3"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_weight="6">
+
+            <TextView
+                android:id="@+id/add_new_word_txt_header_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBlueNormal"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="پشت کارت (پاسخ)"
+                android:textColor="#ffffff"
+                android:textSize="13dp" />
+
+            <EditText
+                android:id="@+id/add_word_meaning_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/add_new_word_txt_header_2"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:hint="تایپ کنید..."
+                android:textColor="@color/colorDark_1"
+                android:textColorHint="@color/colorDark_3"
+                android:textSize="15dp" />
+
+            <!--<android.support.design.widget.FloatingActionButton-->
+                <!--android:id="@+id/add_word_buy_paper"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_marginBottom="15dp"-->
+                <!--android:layout_marginRight="15dp"-->
+                <!--android:background="@color/colorGreenNormal"-->
+                <!--android:src="@mipmap/ic_plus" />-->
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1.25"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/add_word_finish"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_rectangle_beige"
+                android:text="تموم شد"
+                android:textColor="#ffffff"
+                android:textSize="14.5dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/add_word_next_paper"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_rectangle_purple_dark"
+                android:text="برگه بعدی"
+                android:textColor="#ffffff"
+                android:textSize="14.5dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

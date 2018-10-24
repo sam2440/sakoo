@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sixth_slide_bg_color">
+
+    <RelativeLayout
+        android:id="@+id/first_launch_space_between"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"></RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/first_launch_space_between"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight=".75" />
+
+        <RelativeLayout
+            android:id="@+id/firat_lanch_slide_ui"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4">
+
+            <ImageView
+                android:id="@+id/slide_6_circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:scaleX="0"
+                android:scaleY="0"
+                android:src="@drawable/slide_6_circle" />
+
+            <ImageView
+                android:id="@+id/slide_6_chart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/chart"
+                android:padding="85dp"
+                android:translationY="-125dp"
+                android:alpha="0"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/first_launch_slide_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/slide_title_mb"
+            android:layout_marginTop="@dimen/slide_title_mt"
+            android:gravity="center"
+            android:text="@string/slide_6_title"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorWhite"
+            android:translationY="10dp"
+            android:alpha="0"/>
+
+        <TextView
+            android:id="@+id/first_launch_slide_txt"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.3"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:translationY="10dp"
+            android:alpha="0"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

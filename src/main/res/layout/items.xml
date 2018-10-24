@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/nav_header_main" />
+
+        <TextView
+            android:id="@+id/drawer_item_grade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/mortarboard"
+            android:layout_margin="@dimen/menu_item_m"
+            android:text="  مقطع"
+            android:textSize="@dimen/menu_text_Small"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:gravity="right|center_vertical"
+            android:textColor="#525252"
+            android:background="#00000000"/>
+        <!--<TextView-->
+            <!--android:id="@+id/drawer_school"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:drawableRight="@drawable/ic_school"-->
+            <!--android:text="  مدرسه فاقد پشتیبانی"-->
+            <!--android:paddingRight="6dp"-->
+            <!--android:paddingTop="8dp"-->
+            <!--android:paddingBottom="8dp"-->
+            <!--android:textColor="#81075E"-->
+            <!--android:gravity="right|center_vertical"-->
+            <!--android:textSize="@dimen/menu_text_Normal"-->
+            <!--android:background="#00000000"/>-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_size"
+            android:background="#00ad03">
+
+
+            <ImageView
+                android:id="@+id/drawer_item_group_tools_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerInside"
+                android:paddingRight="@dimen/menu_item_pr"
+                android:background="@android:color/transparent"
+                android:adjustViewBounds="true"
+                android:src="@drawable/tools"
+                android:layout_margin="@dimen/menu_item_m"/>
+
+            <TextView
+                android:id="@+id/drawer_item_group_tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="right|center_vertical"
+                android:layout_centerVertical="true"
+                android:shadowColor="#FFF"
+                android:layout_toLeftOf="@id/drawer_item_group_tools_icon"
+                android:text="  جعبه ابزار"
+                android:textColor="#FFF"
+                android:textSize="@dimen/menu_text_Small"
+                android:paddingRight="@dimen/menu_item_pr" />
+
+            <ImageView
+                android:id="@+id/drawer_item_group_tools_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:src="@drawable/information"
+                android:layout_margin="@dimen/menu_item_m"
+                android:onClick="onMenuItemClick"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_size"
+            android:id="@+id/drawer_item_lightner_container"
+            android:onClick="onMenuItemClick"
+            android:background="@drawable/buttonclr">
+
+            <ImageView
+                android:id="@+id/drawer_item_lightner_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerInside"
+                android:paddingRight="@dimen/menu_item_pr"
+                android:adjustViewBounds="true"
+                android:src="@drawable/brain_in_head"
+                android:background="@android:color/transparent"
+                android:layout_margin="@dimen/menu_item_m"/>
+
+            <TextView
+                android:id="@+id/drawer_item_lightner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="right|center_vertical"
+                android:layout_centerVertical="true"
+                android:shadowColor="#FFF"
+                android:layout_toLeftOf="@id/drawer_item_lightner_icon"
+                android:text="  جعبه لایتنر"
+                android:textColor="@drawable/btntext"
+                android:textSize="@dimen/menu_text_Small"
+                android:paddingRight="@dimen/menu_item_pr" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_size"
+            android:id="@+id/drawer_item_answersheet_container"
+            android:onClick="onMenuItemClick"
+            android:background="@drawable/buttonclr">
+
+            <ImageView
+                android:id="@+id/drawer_item_answersheet_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerInside"
+                android:paddingRight="@dimen/menu_item_pr"
+                android:background="@android:color/transparent"
+                android:adjustViewBounds="true"
+                android:src="@drawable/form"
+                android:layout_margin="@dimen/menu_item_m"/>
+
+            <TextView
+                android:id="@+id/drawer_item_answersheet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="right|center_vertical"
+                android:layout_centerVertical="true"
+                android:shadowColor="#FFF"
+                android:layout_toLeftOf="@id/drawer_item_answersheet_icon"
+                android:text="  پاسخنامه"
+                android:textColor="@drawable/btntext"
+                android:textSize="@dimen/menu_text_Small"
+                android:paddingRight="@dimen/menu_item_pr"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_size"
+            android:id="@+id/drawer_item_calc_percent_container"
+            android:onClick="onMenuItemClick"
+            android:background="@drawable/buttonclr">
+
+            <ImageView
+                android:id="@+id/drawer_item_calc_percent_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerInside"
+                android:paddingRight="@dimen/menu_item_pr"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/percentage"
+                android:layout_margin="@dimen/menu_item_m"/>
+
+            <TextView
+                android:id="@+id/drawer_item_calc_percent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="right|center_vertical"
+                android:layout_centerVertical="true"
+                android:shadowColor="#FFF"
+                android:layout_toLeftOf="@id/drawer_item_calc_percent_icon"
+                android:text="  محاسبه درصد"
+                android:textColor="@drawable/btntext"
+                android:textSize="@dimen/menu_text_Small"
+                android:paddingRight="@dimen/menu_item_pr"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_size"
+            android:background="#ff8e00">
+
+            <ImageView
+                android:id="@+id/drawer_item_group_speedbox_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerInside"
+                android:paddingRight="@dimen/menu_item_pr"
+                android:background="@android:color/transparent"
+                android:adjustViewBounds="true"
+                android:src="@drawable/steroids"
+                android:layout_margin="@dimen/menu_item_m"/>
+
+            <TextView
+                android:id="@+id/drawer_item_group_speedbox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="right|center_vertical"
+                android:layout_centerVertical="true"
+                android:shadowColor="#FFF"
+                android:layout_toLeftOf="@id/drawer_item_group_speedbox_icon"
+                android:text="  دوپینگ کن"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/menu_text_Small"
+                android:paddingRight="@dimen/menu_item_pr" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_size"
+            android:id="@+id/drawer_item_purpose_container"
+            android:onClick="onMenuItemClick"
+            android:background="@drawable/buttonclr">
+
+            <ImageView
+                android:id="@+id/drawer_item_purpose_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerInside"
+                android:paddingRight="@dimen/menu_item_pr"
+                android:background="@android:color/transparent"
+                android:adjustViewBounds="true"
+                android:src="@drawable/goal"
+                android:layout_margin="@dimen/menu_item_m"/>
+
+            <TextView
+                android:id="@+id/drawer_item_purpose"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="right|center_vertical"
+                android:layout_centerVertical="true"
+                android:shadowColor="#FFF"
+                android:layout_toLeftOf="@id/drawer_item_purpose_icon"
+                android:text="  هدف گذاری"
+                android:textColor="@drawable/btntext"
+                android:textSize="@dimen/menu_text_Small"
+                android:paddingRight="@dimen/menu_item_pr" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_size"
+            android:onClick="onMenuItemClick"
+            android:id="@+id/drawer_item_chart_container"
+            android:background="@drawable/buttonclr">
+
+            <ImageView
+                android:id="@+id/drawer_item_chart_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerInside"
+                android:paddingRight="@dimen/menu_item_pr"
+                android:background="@android:color/transparent"
+                android:adjustViewBounds="true"
+                android:src="@drawable/daily_report_chart"
+                android:layout_margin="@dimen/menu_item_m"/>
+
+            <TextView
+                android:id="@+id/drawer_item_chart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="right|center_vertical"
+                android:layout_centerVertical="true"
+                android:shadowColor="#FFF"
+                android:layout_toLeftOf="@id/drawer_item_chart_icon"
+                android:text="  گزارش روزانه"
+                android:textColor="@drawable/btntext"
+                android:textSize="@dimen/menu_text_Small"
+                android:paddingRight="@dimen/menu_item_pr" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_size"
+            android:background="#9e005d">
+
+            <ImageView
+                android:id="@+id/drawer_item_group_together_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerInside"
+                android:paddingRight="@dimen/menu_item_pr"
+                android:background="@android:color/transparent"
+                android:adjustViewBounds="true"
+                android:src="@drawable/group"
+                android:layout_margin="@dimen/menu_item_m"/>
+
+            <TextView
+                android:id="@+id/drawer_item_group_together"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="right|center_vertical"
+                android:layout_centerVertical="true"
+                android:shadowColor="#FFF"
+                android:layout_toLeftOf="@id/drawer_item_group_together_icon"
+                android:text="  در کنار هم"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/menu_text_Small"
+                android:paddingRight="@dimen/menu_item_pr" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_size"
+            android:onClick="onMenuItemClick"
+            android:id="@+id/drawer_item_howto_container"
+            android:background="@drawable/buttonclr">
+
+            <ImageView
+                android:id="@+id/drawer_item_howto_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerInside"
+                android:paddingRight="@dimen/menu_item_pr"
+                android:background="@android:color/transparent"
+                android:adjustViewBounds="true"
+                android:src="@drawable/information_purple"
+                android:layout_margin="@dimen/menu_item_m"/>
+
+            <TextView
+                android:id="@+id/drawer_item_howto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="right|center_vertical"
+                android:layout_centerVertical="true"
+                android:shadowColor="#FFF"
+                android:layout_toLeftOf="@id/drawer_item_howto_icon"
+                android:text="  راهنمای استفاده از برنامه"
+                android:textColor="@drawable/btntext"
+                android:textSize="@dimen/menu_text_Small"
+                android:paddingRight="@dimen/menu_item_pr" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_size"
+            android:id="@+id/drawer_item_support_container"
+            android:onClick="onMenuItemClick"
+            android:background="@drawable/buttonclr">
+
+            <ImageView
+                android:id="@+id/drawer_item_support_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerInside"
+                android:paddingRight="@dimen/menu_item_pr"
+                android:background="@android:color/transparent"
+                android:adjustViewBounds="true"
+                android:src="@drawable/like"
+                android:layout_margin="@dimen/menu_item_m"/>
+
+            <TextView
+                android:id="@+id/drawer_item_support"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="right|center_vertical"
+                android:layout_centerVertical="true"
+                android:shadowColor="#FFF"
+                android:layout_toLeftOf="@id/drawer_item_support_icon"
+                android:text="  مارا حمایت کنید"
+                android:textColor="@drawable/btntext"
+                android:textSize="@dimen/menu_text_Small"
+                android:paddingRight="@dimen/menu_item_pr" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_size"
+            android:onClick="onMenuItemClick"
+            android:id="@+id/drawer_item_comments_container"
+            android:background="@drawable/buttonclr">
+
+            <ImageView
+                android:id="@+id/drawer_item_comments_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerInside"
+                android:paddingRight="@dimen/menu_item_pr"
+                android:background="@android:color/transparent"
+                android:adjustViewBounds="true"
+                android:src="@drawable/writing"
+                android:layout_margin="@dimen/menu_item_m"/>
+
+            <TextView
+                android:id="@+id/drawer_item_comments"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="right|center_vertical"
+                android:layout_centerVertical="true"
+                android:shadowColor="#FFF"
+                android:layout_toLeftOf="@id/drawer_item_comments_icon"
+                android:text="  نظرات، پیشنهادات و انتقادات"
+                android:textColor="@drawable/btntext"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="@dimen/menu_text_Small"
+                android:paddingRight="@dimen/menu_item_pr"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_size"
+            android:id="@+id/drawer_item_location_container"
+            android:onClick="onMenuItemClick"
+            android:background="@drawable/buttonclr">
+
+            <ImageView
+                android:id="@+id/drawer_item_location_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerInside"
+                android:paddingRight="@dimen/menu_item_pr"
+                android:background="@android:color/transparent"
+                android:adjustViewBounds="true"
+                android:src="@drawable/team"
+                android:layout_margin="@dimen/menu_item_m"/>
+
+            <TextView
+                android:id="@+id/drawer_item_location"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="right|center_vertical"
+                android:layout_centerVertical="true"
+                android:shadowColor="#FFF"
+                android:text="  با ما بیشتر آشنا شوید"
+                android:layout_toLeftOf="@id/drawer_item_location_icon"
+                android:textColor="@drawable/btntext"
+                android:textSize="@dimen/menu_text_Small"
+                android:paddingRight="@dimen/menu_item_pr" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

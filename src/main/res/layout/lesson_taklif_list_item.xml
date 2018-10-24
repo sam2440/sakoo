@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+  <RelativeLayout
+      android:id="@+id/taklif_item_container"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:gravity="right"
+      android:layout_marginBottom="2dp">
+
+      <CheckBox
+          android:id="@+id/taklif_checkbox"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_marginRight="10dp"
+          android:layout_marginLeft="6.5dp"
+          android:layout_centerVertical="true"
+          android:gravity="center"
+          android:padding="2dp"/>
+
+      <TextView
+          android:id="@+id/lesson_text"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:text="heh"
+          android:layout_centerVertical="true"
+          android:gravity="right|center_vertical"
+          android:layout_toLeftOf="@id/taklif_checkbox"
+          android:layout_marginRight="2.5dp"/>
+
+      <ImageView
+          android:id="@+id/taklif_erase_taklif_donity"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_marginLeft="2dp"
+          android:src="@drawable/eraser"
+          android:layout_centerVertical="true"
+          android:visibility="gone"/>
+
+      <ImageView
+          android:id="@+id/taklif_edit_time_entered"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="4dp"
+          android:layout_toRightOf="@id/taklif_erase_taklif_donity"
+          android:layout_marginRight="8dp"
+          android:src="@drawable/history"
+          android:layout_centerVertical="true"
+          android:visibility="gone"/>
+
+      <TextView
+          android:id="@+id/taklif_text"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:text="talif"
+          android:gravity="right|center_vertical"
+          android:layout_toLeftOf="@id/lesson_text"
+          android:layout_toRightOf="@id/taklif_edit_time_entered"
+          android:layout_marginLeft="4dp"
+          android:layout_marginRight="2dp"
+          />
+
+  </RelativeLayout>
+
+</LinearLayout>

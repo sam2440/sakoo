@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/rounded_rectangle_white1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_top_rectangle_greenblue"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp">
+
+            <ImageView
+                android:id="@+id/add_dars_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:scaleType="centerInside"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_back_black_37dp" />
+
+            <TextView
+                android:id="@+id/add_dars_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:text="@string/add_dars_layout_title"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/menu_text_Large" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/add_dars_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="50dp"
+                android:inputType="text"
+                android:textSize="19dp"
+                android:hint="@string/add_dars_edittext_hint"
+                android:textColorHint="@color/colorGray_1"
+                android:backgroundTint="@color/colorDark_2"
+                android:gravity="center_horizontal|bottom"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/add_dars_btn_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_bottom_rectangle_green"
+            android:text="@string/add_dars_btn_confirm"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/menu_text_Large" />
+    </LinearLayout>
+
+</LinearLayout>

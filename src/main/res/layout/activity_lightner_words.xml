@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.goharshad.arena.sakoo.LightnerWords"
+    android:orientation="vertical"
+    android:background="#D6D7D7">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/laytner_word_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#232323">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lay_word_laytitle_word"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:text="@string/activity_lightner_buy_new_name_1"
+                android:textColor="@color/colorWhite"
+                android:gravity="center_vertical|right"
+                android:textSize="13.5dp"
+                android:layout_marginRight="@dimen/activity_name_mr"/>
+            <TextView
+                android:id="@+id/lay_word_laytitle_word_group"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/colorWhite"
+                android:gravity="top|right"
+                android:textSize="11dp"
+                android:layout_marginRight="@dimen/activity_name_mr"/>
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/laytner_layout_counter"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/laytner_tv_counter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#f2e127"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="11"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/main_bg">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5.25"
+            android:background="#ffffff"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#21b605">
+                <TextView
+                    android:id="@+id/laytner_counter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:paddingRight="3dp"
+                    android:paddingLeft="3dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"/>
+                <TextView
+                    android:id="@+id/laytner_counter_slash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="/"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:paddingRight="3dp"
+                    android:paddingLeft="3dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"/>
+                <TextView
+                    android:id="@+id/laytner_counter_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:paddingRight="3dp"
+                    android:paddingLeft="3dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/laytner_word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textSize="35dp"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/laytner_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_share_blue_40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="7dp"
+                android:layout_marginBottom="5dp" />
+            <ImageView
+                android:id="@+id/laytner_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_content_copy_blue_40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/laytner_share"
+                android:layout_marginLeft="13dp"
+                android:layout_marginBottom="5dp" />
+        </RelativeLayout>
+~
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4.75"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="40dp"
+            android:background="#ffffff">
+            <ImageView
+                android:id="@+id/laytner_hide_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/content_hider_bg"
+                android:scaleType="fitXY"/>
+            <TextView
+                android:id="@+id/laytner_meaning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textSize="30dp"
+                android:textColor="#3e3d3d"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp">
+
+            <LinearLayout
+                android:id="@+id/laytner_two_btns"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <Button
+                    android:id="@+id/laytner_dont_remember"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="یادم نبود:("
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/menu_text_Normal"
+                    android:background="#393838"
+                    android:layout_marginRight="2dp"/>
+                <Button
+                    android:id="@+id/laytner_remember"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="بلد بودم:)"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/menu_text_Normal"
+                    android:background="#393838"
+                    android:layout_marginLeft="2dp"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/laytner_hazf_baygani_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="حذف کن"
+                android:textStyle="bold"
+                android:textSize="@dimen/menu_text_Normal"
+                android:background="#f5de42"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

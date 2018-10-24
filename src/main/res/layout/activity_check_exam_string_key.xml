@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.goharshad.arena.sakoo.CheckExamStringKey">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/anscheckstrtoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#232323"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/anscheckstrtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/activity_name_mr"
+                android:text="پاسخ رشته ای"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/menu_text_Large" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_purple"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="4.5"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/numbering_signs" />
+
+        <TextView
+            android:id="@+id/ans_checkstr_txt_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="پاسخ را به صورت یک رشته ی عددی وارد کنید"
+            android:textColor="#ffffff"
+            android:textSize="16.75dp"/>
+
+        <TextView
+            android:id="@+id/ans_checkstr_txt_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="برای مثال :‌ ۱۲۳۳"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4.5"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/check_exam_string_key_et"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="3.5"
+                android:background="#49e2dfdf"
+                android:gravity="center"
+                android:hint="تایپ کنید..."
+                android:inputType="number"
+                android:textColor="#000000"
+                android:textSize="21dp"
+                android:textColorHint="@color/colorDark" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/check_exam_string_key_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffae00"
+            android:text="تصحیح کن"
+            android:textSize="18dp"
+            android:textColor="#ffffff" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

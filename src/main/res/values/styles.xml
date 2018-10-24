@@ -1,0 +1,35 @@
+<resources >
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowActionBarOverlay">true</item>
+    </style>
+
+    <style name="myTimePickerStyle" parent="@android:style/Widget.Material.Light.TimePicker">
+        <item name="android:numbersTextColor">@color/colorDark</item>
+        <item name="android:numbersBackgroundColor">@color/colorLightGray</item>
+        <item name="android:numbersSelectorColor">@color/colorWhite</item>
+        <item name="android:headerBackground">@color/colorDark</item>
+    </style>
+    <!--<style name="my_checkbox_style">-->
+        <!--<item name="buttonTint">#0f0</item>-->
+        <!--<item name="android:backgroundTint">#0f0</item>-->
+    <!--</style>-->
+
+    <style name="DefaultTheme" parent="Theme.AppCompat.Light.DarkActionBar"></style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

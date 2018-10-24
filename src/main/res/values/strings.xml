@@ -1,0 +1,680 @@
+<resources>
+    <string name="app_name">سکو</string>
+    <string name="activity_purposing_name">هدفگذاری</string>
+    <string name="activity_team_name">با ما بیشتر آشنا شوید</string>
+    <string name="activity_daily_report_name">گزارش</string>
+    <string name="activity_show_results_name">نتایج آزمون</string>
+    <string name="activity_intro_name">راهنمای استفاده</string>
+    <string name="activity_support_name">ما را حمایت کنید</string>
+    <string name="activity_lightner_info_name">راهنمای لایتنر</string>
+    <string name="activity_lightner_add_new_name">اضافه کردن برگه جدید</string>
+    <string name="activity_lightner_buy_new_name_1">جعبه لایتنر</string>
+    <string name="activity_lightner_buy_new_name_2">خرید برگه جدید</string>
+    <string name="activity_gozaresh_azmon">گزارش آزمون</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="btn_start">شروع برنامه</string>
+    <string name="btn_skip">بزن بریم !</string>
+    <!--LABELS-->
+    <string name="activity_purposing_label">هدف گذاری</string>
+
+    <!-- SLIDES -->
+    <string name="slide_1_title">قدرت</string>
+    <string name="slide_2_title">هدفگذاری</string>
+    <string name="slide_3_title">مقایسه</string>
+    <string name="slide_4_title">دسترسی</string>
+    <string name="slide_5_title">ابزار</string>
+    <string name="slide_6_title">گزارش</string>
+    <string name="slide_7_title">مدرسه</string>
+
+    <!-- VARED BARNAME -->
+    <string name="add_dars_layout_title">وارد کردن درس جدید</string>
+    <string name="add_dars_btn_confirm">ثبت</string>
+    <string name="add_dars_edittext_hint">اسم درس</string>
+
+    <!-- TEXTS -->
+    <string name="txt_today">امروز</string>
+    <string name="txt_avg">میانگین</string>
+    <string name="txt_summation">مجموع</string>
+    <string name="txt_dars_mehvar">درس محور</string>
+    <string name="txt_majmoo_dirooz">مجموع دیروز</string>
+    <string name="txt_madreseman">مدرسه من</string>
+    <string name="txt_majmoo_hafte">مجموع هفته</string>
+    <string name="txt_majmoo_hafte_pish">مجموع هفته پیش</string>
+    <string name="txt_mahane">ماهانه</string>
+    <string name="txt_haftegi">هفتگی</string>
+    <string name="txt_hafte">هفته</string>
+    <string name="txt_bazdehi">بازدهی</string>
+    <string name="txt_majmoohaftegi">مجموع هفتگی</string>
+    <string name="txt_mianginmahane">میانگین ماهانه</string>
+    <string name="txt_rotbedarclass">رتبه در کلاس</string>
+    <string name="txt_moadelmahane">معدل ماهانه</string>
+    <string name="txt_rotbedarmadrese">رتبه در مدرسه</string>
+    <string name="txt_dars">درس</string>
+    <string name="txt_nomreshoma">نمره شما</string>
+    <string name="txt_mianginclass">میانگین کلاس</string>
+    <string name="txt_mianginpaye">میانگین پایه</string>
+    <string name="txt_bargehayeshoma">برگه های شما</string>
+    <string name="txt_lightner_buy_50">خرید ۵۰ برگه جدید ۳۰۰۰ تومان</string>
+    <string name="txt_lightner_buy_100">خرید ۱۰۰ برگه جدید ۵۰۰۰ تومان</string>
+    <string name="txt_lightner_buy_200">خرید ۲۰۰ برگه جدید ۸۰۰۰ تومان</string>
+    <string name="txt_no_taklif_exists">تکلیفی برای امروز وجود ندارد</string>
+    <string name="txt_entekhabkonid">انتخاب کنید</string>
+    <string name="txt_updateeverymonth">هر ماه یک بار به روز رسانی می شود</string>
+    <string name="txt_thisforschools">این آیتم برای مدارس در دسترس می باشد</string>
+    <string name="txt_entekhabemaqta">مقطع خود را انتخاب کنید</string>
+    <string name="txt_timenotvalidated">زمان وارد شده نمی تواند صفر باشد</string>
+    <string name="txt_no_gozaresh_exists">هنوز گزارشی وجود ندارد</string>
+    <string name="txt_no_empty_lessons">دروس انتخابی نمیتواند خالی باشد</string>
+    <string name="txt_wrongdatacalcpercentage">اطلاعات وارد شده اشتباه است</string>
+    <string name="txt_toolsdescription">
+        نجاری بدون اره و گیره و سمباده و ... مگه میشه ؟!
+        شک نکن درس خوندن هم ابزار لازم داره.
+        ابزارهایی که کارتو راحت کنن و سریع تر به پیشرفت برسوننت.
+    </string>
+
+    <!--splash-->
+    <string name="connect_title">وصل شد</string>
+    <string name="disconnect_title">وصل نشد</string>
+    <!--slider-->
+    <string name="slider_bezan_berim">بزن بریم!</string>
+    <string name="slider_finish">پایان</string>
+    <!--mainPage-->
+    <string name="weekday_today">امروز</string>
+    <string name="weekday_saturday">شنبه</string>
+    <string name="weekday_sunday">یکشنبه</string>
+    <string name="weekday_monday">دوشنبه</string>
+    <string name="weekday_tuesday">سهشنبه</string>
+    <string name="weekday_wednesday">چهارشنبه</string>
+    <string name="weekday_thursday">پنجشنبه</string>
+    <string name="weekday_friday">جمعه</string>
+    <string name="lotfan_barname_haftegi_ra_vared_konid">وارد کردن برنامه هفتگی</string>
+    <string name="vared_kardan_takalife_emroz">وارد کردن تکالیف امروز</string>
+    <string name="vared_kardan_takalife_emroz_after">حواست باشه</string>
+    <string name="takalife_man">تکالیف من</string>
+    <string name="motalee_emroz">مطالعه امروز</string>
+    <string name="havaset_bashe">حواست باشه ها!</string>
+    <string name="moshaver">آقای مشاور</string>
+
+    <!-- DAILY INDEXES-->
+    <string name="index_first">زنگ اول</string>
+    <string name="index_second">زنگ دوم</string>
+    <string name="index_third">زنگ سوم</string>
+    <string name="index_forth">زنگ چهارم</string>
+    <string name="index_fifth">زنگ پنجم</string>
+    <string name="index_sixth">زنگ ششم</string>
+
+    <!-- ADVICES -->
+    <string-array name="advises">
+        <item>
+                    بهتر است اهداف بلند مدت را به چندین هدف کوتاه مدت کوچکتر تقسیم کنیم
+ تا به راحتی و به صورت دقیق تر و بدون استرس رسیدن به هدف برای آن برنامه
+ ریزی کنیم . مثلا کسی که هدفش قبولی در کنکور است ابتدا می تواند برای کسب
+ فلان رتبه یا قبولی در فلا ن رشته برنامه ریزی کند ، سپس متناسب با هدف نهایی
+ اش برای هر امتحان هدف کوچکی تعیین کند
+        </item>
+        <item>
+            بهترین مدیر و مشاور تحصیلی شما خودتان هستید چون هیچ کسی به اندازه شما از وضعیت درسی و مطالعاتی خودتون اطلاع نداره!
+        </item>
+        <item>
+            برای هدفگذاری روی ساعت مطالعه منطقی باشید! قرار نیست که یه روزه درس خون بشید.
+            برای مثال اگر تا دیروز 1 ساعت مطالعه میکردید، برای این هفته روی 1:30 هدفگذاری کنید.
+        </item>
+        <item>
+            دوستان من، یادتون باشه که اگه یه روز از برنامه خودتون جا موندید
+            و نتونستید اون رو کامل انجام بدید دلسرد نشید
+            و مطمئن باشید که در روزهای آینده جبرانش میکنید.
+        </item>
+        <item>
+            در تقسیم کردن مطالب بین روز های هفته سعی کنید که تعادل رو رعایت کنید.
+            . اینجور نباشه که یه روز سنگین باشه و یه روز سبک!
+        </item>
+        <item>
+            بچه ها حواستون باشه که در طول یک هفته همیشه یه زمانی رو
+            رو برای اتفاقات پیش بینی نشده بزارید که اگه با این شرایط مواجه شدین،
+            از برنامتون جا نمونید.
+        </item>
+        <item>
+            دوستان عزیزم، همیشه یادتون باشه که برای خودتون هدف گذاری انجام بدید.
+            هدف گذاری های کوتاه مدت و بلند مدت.
+            برای مثال هدف گذاری برای امتحان ریاضی دو روز دیگتون میشه کوتاه مدت
+            و هدفگذاری برای امتحان ترم میشه بلند مدت.
+        </item>
+        <item>
+            راستی میدونستید که برنامه ریزی باعث میشه شما زمان بیشتری داشته باشید؟
+            برنامه ریزی باعث میشه که شما زمان های تلف شده کمی داشته باشید و زمان های مفید بیشتر.
+        </item>
+        <item>
+            بچه ها فرصت نسوزونید! خیلیا هستن که فک میکنن فرصت و زمان یکسانه.
+            فرصت زمان هایی هستش که شرایط استفاده از اون براتون ایجاد شده، پس فرصت درس خوندنتون رو از دست ندید.
+        </item>
+        <item>
+            محققان علم روان شناسی معتقدند که اگر 7 روز یه کاری رو تکرار کنیم، اون کار به عادت ما تبدیل میشه،
+            پس برای شروع 7 روز رو سخت بگذرونید و بعدش نون کره رو بزنید به بدن!
+        </item>
+        <item>
+            بهترین روش برای شناختن خودتون اینه که خودتون رو در گذر زمان مشاهده کنید،
+            برای مثال ببینید که سه ماه پیش کجا بودید و الان کجا هستید. خب چجوری؟ از قسمت نمودار و گزارشات همین برنامه استفاده کنید!
+        </item>
+        <item>
+            سعی کنید در اولین روز های با برنامه درس خوندن از درس هایی شروع کنید که با اونا راحت تر هستید و بعد برید سراغ بقیه.
+        </item>
+        <item>
+            بچه ها ! لطفا از کاه کوه نسازید، خودتون رو اسیر اینکه این درس سخته و من این درس رو نمیفهمم و هر چی میخونم یاد نیمگیرم نکنید.
+            . سعی کنید روی اون درس تمرکز بیشتری داشته باشید یا اون رو هر روز مطالعه کنید ، حتی کم.
+        </item>
+        <item>
+            اینو یادتون باشه که اگه ده دقیقه برای برنامه ریزی وقت بزارید بیش از چند ساعت در وقتتون صرفه جویی کردید.
+        </item>
+        <item>
+            دوستان من ، اغلب انسان ها قبل از اینکه به موفقیت برسند،دست از تلاش برمی دارند و در دقایق پایانی بازی را رها می کنند.
+        </item>
+        <item>
+            بچه ها این نکته رو فراموش نکنید که درس هر روز رو همون روز بخونید ، توی برنامه هم این قانون رعایت شده ، متوجهش شده بودید؟
+        </item>
+        <item>
+            قصه خرگوش و لاکپشت رو یادتون هست؟ سعی کنید آهسته و پیوسته درس بخونید نه بسرعت و نامتعادل.
+        </item>
+        <item>
+            بچه ها یادتون باشه که اگر امروز کارهایی رو انجام بدید که دیگر دوستاتون حاضر به انجامش نیستن،
+            فردا کارهایی رو انجام میدید که دوستاتون قادر به انجام اونا نیستن!
+        </item>
+        <item>
+            بچه ها.  تا به حال به این موضوع فکر کرده‌اید که دانش‌آموزانی که در درس‌ها موفق‌اند چه‌کار می‌کنند؟
+            چگونه مطالعه می‌کنند؟  یک دانش‌آموز خوب و موفق برای درس خواندن و مطالعه برنامه‌ریزی می‌کند و عادت دارد ساعات مطالعه‌ی خود را یادداشت کند.
+        </item>
+        <item>
+            دوستان من! شاید سریع ترین راه برای پیشرفت در درس خواندن این باشه که دیگر اشتباهات خود را تکرار نکنید. پس اونا رو حتما و حتما تمرین کنید.
+        </item>
+        <item>
+            موفقیت مجموع تلاش های کوچک و  تکرار روز به روز آن ها است، حتی اگر هیچ نشانه ای از موفقیت نمی بینید.
+        </item>
+        <item>
+            خب روانشناسان معتقدند که برای یادگیری کامل یک مبحث درسی حداقل سه مرحله باید سپری بشه،
+            پس شما برای یک یادگیری خوب لازم دارید که هر مبحث رو سه بار دوره کنید برای مثال امروز ، دو روز دیگه و چهار روز دیگه.
+        </item>
+        <item>
+            یکی از مسائل مهم در مورد موفقیت انسان‌ها میزان اعتمادبه‌نفس آن‌هاست. راهکار اساسی در کسب اعتمادبه‌نفس در همه‌ی کارها، ابتدا مشاهده و بعد عمل کردن است.
+             برای کسب اعتمادبه‌نفس در مورد درس خواندن نیز به همین صورت است. روش مشاهده و عمل در مورد درس خواندن این گونه است: در مورد درس‌های ریاضی و به‌اصطلاح حل‌کردنی،
+            بعد از مطالعه‌ی درس‌نامه به نمونه‌ی تست مراجعه کنید، ولی مبنا را حل کردن قرار ندهید.
+        </item>
+        <item>
+            خلاقیت مهم‌ترین ویژگی افراد مثبت‌اندیش است. آن‌ها هر روز ایده‌ای تازه برای رفع اشکالات خود دارند و با اندیشیدن به هدفشان و جایگاهی که در آینده خواهند داشت هر روز انگیزه‌ای نو دارند.
+        </item>
+        <item>
+            بنظر شما کسانی که موفق هستند و رتبه های برتر را کسب می کنند قهرمان زاده می شوند یا ساخته می شوند؟
+            ؟ خب بنظر من هیچ کسی در هنگام تولد برتری فکری نسبت به بقیه نداره
+            بلکه مهم ترین چیزی که باید در کودکی آموخت ، تلاش تا رسیدن به هدف هستش.
+        </item>
+        <item>
+            یکی از راه های افزایش ساعت مطالعه فشرده سازی اون هستش. برای مثال اگر من تا دیروز از 8 صبح تا 8 شب ، 6 ساعت درس میخونم ،
+            امروز همون 6 ساعت رو از 8 صب تا 7 شب بخونم تا مجموع ساعاتی که تلف میکنم کمتر بشه.
+        </item>
+        <item>
+            بچه ها ، همیشه کار مهم هر روز رو قبل از کارای دیگه انجام بدید. سعی کنید زمانی که انرژی زیادی دارید
+            درس های سخت تر و چالشی خودتون رو مطالعه کنید و بعد برید سراغ درس های آسون تر و شیرین تر.
+        </item>
+        <item>
+            مهم ترین گام در برنامه ریزی ، عمل کردن به برنامه هست. خودتون رو ملزم به این کنید که باید حتما حتما تکالیف امروز رو همین امروز انجا بدید.
+            . اگه این کارو انجام بدید تقریبا همیشه تکالیف جامانده یا تکالیف فردا رو نخواهید داشت.
+        </item>
+        <item>
+            بچه ها در قسمت تکالیف من سه قسمت وجود داره ، امروز، فردا، جامانده . مهم اینه که شما در اولویت اول تکالیف امروزتون رو انجام بدید.
+            تکالیف جامانده اونایی هستن که شما در طول روز های گذشته اون ها رو انجام نداده اید و
+            تکالیف فردا اونایی هستن که امروز آخرین مهلت انجام اون ها هستش. این قسمت نباید همیشه پر باشه ها!!
+        </item>
+        <item>
+            شاید براتون سوال باشه که بازدهی من یعنی چی؟ خب بازدهی امروز شما به این معنی هستش که اگر من امروز 10 ساعت وقت آزاد دارم،
+             7 ساعتشو میتونم مطالعه کنم. حالا هر چند ساعت از این 7 ساعت بخونم میشه بازدهی مطالعه امروز من.
+        </item>
+        <item>
+            عزیزانم ، اگر تازه میخواهید با برنامه درس خوندن رو شروع کنید کمیت رو اولویت قرار بدید.
+            . یعنی ابتدا ساعات مطالعه خودتون رو به حد مناسبی برسونید و سپس کیفیت اون رو بالا ببرید. به همین سادگی و به همین خوشمزگی!
+        </item>
+        <item>
+            کلید موفقیت شما توی جیب شماس نه توی جیب دوستتون. پس در اولین فرصت بررسی کارنامه درسی خودتون بجای مقایسه کردن
+            خودتون با دوستاتون ، کارنامه جدیدتون رو با قبلیه مقایسه کنید و ببنید با خودتون چند چندید.
+        </item>
+        <item>
+            اگر برای خودتون هدف گذاری می کنید و شور و علاقه ای برای رسیدن به هدفتون ندارید اون هدف شما نیست.
+            . باید اهدافتون رو حقیقی انتخاب کنید و وقتی به اون هدف رسیدید لذت موفقیت رو بچشید.
+        </item>
+        <item>
+            دوستان فشار بیش از به خودتون هنگام درس خوندن شما رو مثل فنری میکنه که هر لحظه ممکنه از جای خودش خارج بشه
+            ! همیشه به این قانون پایبند باشید که در کنار درس خوندن استراحت و تفریح واجبه.
+        </item>
+        <item>
+            ورزش ورزش ورزش، هیچ وقت برای ورزش نکردن درس رو بهونه نکنید . شما از مغزتون زیاد استفاده میکنید
+            پس مغزتون باید در نشاط کامل باشه تا بتونید عملکرد بهتری داشته باشید و نشاط مغز ورزشه.
+        </item>
+        <item>
+            دوستان ، از غیبت کردن بترسید. برای خودتون خط قرمز هایی مشخص کنید و به اونا احترام بزارید.
+            نظم و پیوستگی مهم ترین کلیدی هستش که باعث میشه شما از برنامه خودتون جا نمونید .
+        </item>
+        <item>
+            برای مطالعه سعی کنید ساعت مشخص و مکان معینی داشته باشید. سعی کنید اگر هم خسته بودید به قراری که با خودتون گذاشتید پایبند باشید.
+            سعی کنید برای انجام دادن تکالیف روزانه از میز و صندلی یکسان و مشخصی برای خودتون استفاده کنید.
+        </item>
+        <item>
+            یاد بگیرید خودتون رو مدیریت کنید. حال این مدیریت درسی باشه یا توی زندگی روزمره یا توی کار و روابط اجتماعی .
+            فرصت کسب این مهارت رو از دست ندید.
+        </item>
+        <item>
+            انسان در هر حرفه‌ای تنها بر پایه‌ی نقاط قوت خود می‌تواند کار شایانی انجام دهد.
+            . معنای این حرف بسیار واضح و بدیهی است: شما تنها هنگامی می‌توانید در درسی که می‌خوانید یا کاری که می‌کنید پیشرفت کنید و سرآمد شوید که بر اساس نقاط قوت خود عمل کنید.
+        </item>
+        <item>
+            در امور مختلف، مثل مسابقات ورزشی یا پروژه‌های کاری، همیشه زمان‌هایی وجود دارد که ارزش آن‌ها چندین برابر سایر زمان‌هاست.
+            به عنوان مثال، در مسابقات اتومبیل‌رانی، یک شروع فوق‌‌العاده می‌تواند راننده را از سایر رقبا جلو بیندازد پس همیشه با قدرت شروع کنید.
+        </item>
+        <item>
+            بچه ها، تعداد قابل توجهی از دانش‌آموزان، تابستان را فصل استراحت می‌دانند و مهرماه را برای شروع برنامه‌ریزی و تلاش در نظر گرفته‌اند
+            و استفاده از تابستان یعنی سبقت گرفتن از تعداد زیادی از دانش‌آموزان. حواس ها جمع تر باشه.
+        </item>
+        <item>
+            اگر می‌خواهیم در کاری موفق شویم، باید تمرکز خود را به طور کامل روی آن کار بگذاریم؛ به‌عبارتی آن کار باید اولویت اول ما باشد.
+            گاهی دانش‌آموزانی را می‌بینم که می‌خواهند همه کار بکنند و در کنار آن درس هم بخوانند. این طوری هم می‌توان درس خواند،
+            ، اما وقتی حرف از آرزو می‌شود، می‌بینم که بهترین‌ها را می‌خواهند. به آن‌ها می‌گویم اگر مسیر موفقیت خودشان را در حوزه‌ی تحصیل می‌بینند، باید درس خواندن هم اولویت اول آن‌ها باشد.
+        </item>
+        <item>
+            کایزن یک فلسفه‌‌ی ژاپنی به مفهوم بهبود مستمر و تدریجی و تغییر به سمت بهتر شدن است. کایزن به ما می‌گوید
+        برای رسیدن به موفقیت لازم نیست جهش‌های ناگهانی داشته باشیم. تنها کافی است هر روز یک قدم به سمت بهتر شدن پیش برویم.
+        </item>
+        <item>
+            نگویید چرا این کار انجام نمی‌شود. به این فکر کنید که چگونه می‌توانید آن را انجام دهید.
+            حتی اگر سخت‌ترین درس‌ها را باید مطالعه کنید، به دنبال روش‌هایی باشید که برای تسلط بر هر مبحث به شما کمک می‌کنند.
+        </item>
+        <item>
+            در مورد مشکلی که به وجود می‌آید نگرانی به خود راه ندهید؛ اما فوراً برای رفع آن اقدام کنید.
+            مثلاً اگر در یک آزمون نتیجه‌‌ی مطلوبی نگرفتید به جای نگرانی، وقت را تلف نکنید و راهکارهای خود را برای موفقیت و پیشرفت در آزمون
+            بعدی یادداشت کرده و برایش برنامه‌ریزی کنید. هر بار کافی است کمی نسبت به قبل پیشرفت کنید.
+        </item>
+        <item>
+            کمال‌گرا نباشید. لازم نیست جهش ناگهانی داشته باشید. به‌آهستگی پیشرفت کنید.
+            . امروز ساعت مطالعه و تعداد تست‌های خود را نسبت به دیروز کمی افزایش دهید. کمی با کیفیت‌تر درس بخوانید.
+        </item>
+        <item>
+            اولین گام برای یک مطالعه صحیح این است که یک مرور کلی از آنچه که ما میخواهیم بخوانیم را انجام دهیم. این کار معادل کار یک هنرمند نقاشی است.
+            همانطور که یک نقاش، ابتدا یک طرح کلی از مرزهای یک نقاشی را می سازد، در مطالعه یک کتاب نیز با مرور کلی یک کتاب یا فصل یا یک مبحث درسی ،‌ یک نظریه ذهنی از  مرزهای آنچه را که می خواهیم در مورد آن یادگیری داشته باشیم ، ایجاد می کنیم.
+        </item>
+        <item>
+            یکی از بهترین روش ها مطالعه برای امتاحانات جامع مانند امتحانات ترم این است که با حل نمونه سوال کا ردوره مزالب را آغاز کنیم. در ابتدا ببینیم که روی کدوم قسمت ها تسلط بیشتر داریم و کجاها ضعیف تر هستیم تا زمان خودمون رو بهتر تقسیم کنیم.
+        </item>
+        <item>
+            مغز انسان مثل هر عضله دیگر بعد از استفاده طولانی، خسته می شود. شما نمیتوانید بی وقفه از مغز خود با همان کارایی اولیه،‌ استفاده کنید.  بدون استراحت و با خستگی ،‌کارایی
+            مغز برای یادگیری و حفظ اطلاعات  به طور چشمگیری کاهش می یابد. توصیه می کنیم هر 25 تا 30 دقیقه برای حداکثر بهره وری در یادگیری ،‌به مغز خود استراحت بدهید.
+        </item>
+        <item>
+            اگر با یک نگرانی و نگرش منفی مثلا از اینکه زمان کم ببیاورید و نتوانید برنامه جلسه درسی خود را در این ساعت تمام کنید ، زمان خود را از دست داده اید و
+            وارد یک گودال ناامیدی شده اید. یک نگرش منفی به طور قابل توجهی اثر بخشی مطالعه شما را کاهش می دهد. تا حد ممکن، نگرش مثبت را قبل و در طول جلسه مطالعه خود حفظ کنید.
+        </item>
+        <item>
+            نوشتن یادداشت های دستی و نکته بردای در طول کلاس ممکن است به نظر یک کار خسته کننده بیاید، اما مطالعات نشان داده است
+            که آن دسته از دانش آموزانی که  نکات و خلاصه برداری، یادداشت از نکاتی که معلم در طول کلاس می گوید را با دست خودشان می نویسند،
+            ، به طرز چشمگیری موفق تر از  از کسانی است که یادداشت های دیگران را می گیرند.
+        </item>
+        <item>
+            برای نوشتن آنچه یاد گرفته اید ، زمانی را قرار دهید. این کار به شما به  درک مفاهیم کلی در طول مطالعه کمک می کند.
+            . خلاصه برداری و یادداشت برداری پس از مطالعه یک مبحث به شما این امکان را می دهد تا در زمان های جمع
+            بندی ، مرور ، قبل از امتحان با گذاشتن وقت بسیار کمتری، مطالب بیشتری را بخوانید و به یاد آورید.
+        </item>
+        <item>
+            چنانچه یک محیط مطالعه برایتان خیلی تکراری شده وموجب خستگی ذهنی شما در طول مطالعه می شود، می توانید برای لحظاتی محل خود را در طول مطالعه تغییر دهید تا موجب رفع خستگی جسمی و ذهنی شما شودو
+            این کار موجب افزایش نیروی شادابی و تمرکز شما و رفع خستگی شما از تکراری بودن محل مطالعه تان می شود.
+        </item>
+        <item>
+            حفظ تعادل در هر کاری یکی از مهمترین کارها برای موفقیت است.  تعادل در مدرسه برای موفقیت ضروری است.
+            . تمام وقت خود را صرف مطالعه و یا تمام وقت خود را با دوستان خود صرف نیست.
+            زندگی و برنامه متعادلی را پیاده سازی دنبال کنید. زندگی در تعادل، شما را در مسیر موفقیت قرار می دهد.
+        </item>
+        <item>
+            هدفتان را مشخص کنید و همواره آن را مد نظر داشته باشید و آن را بنویسید و تکرار کنید. هر شب بنویسید؛ هر روز بنویسید. نوشتن اعجاز می‌کند.
+            هدفی را که می‌نویسید خلق خواهید کرد. آرزوهای خود را بنویسید تا محقق شود. وقتی اهدافتان را می‌نویسید از جایی که باور نمی‌کنید محقق می‌شوند.
+        </item>
+        <item>
+            برخی از دانش‌آموزان، از یادآوری تعداد زیاد معانی کلمات زبان، ادبیات، فرمول‌ها و ...  رنج می‌برند؛ زیرا تعداد زیاد است و یادسپاری آن‌ها دشوار.
+            جعبه‌ی لایتنر با تکرار منظم اطلاعات، سبب انتقال آن به حافظه‌ی بلندمدت می‌شود. هنگامی که اطلاعات به حافظه‌ِی بلندمدت منتقل می‌شود، یادآوری سریع‌تر انجام می‌‌شود. از جعبه لایتنر استفاده کنید.
+        </item>
+    </string-array>
+
+    <!-- notifications-->
+    <string name="notif_welcome">
+        سلام ، به سکو خوش اومدی
+        ممنون که مارو انتخاب کردی
+    </string>
+
+    <string name="notif_fill_in_purposing">
+        حالا میتونی از قسمت هدفگذاری توی منو ، زمان های در دسترس و هدفگذاری های خودت رو مشخص کنی
+    </string>
+
+    <string name="notif_varedkardane_barname">
+        میتونی از قسمت برنامه هفتگی شروع کنی و مقطع و برنامتو یه بار برای همیشه وارد کنی
+    </string>
+
+    <!--spinner_maghtae tahsili-->
+
+    <string name="grade_7">هفتم</string>
+    <string name="grade_8">هشتم</string>
+    <string name="grade_9">نهم</string>
+    <string name="grade_10_riazik">دهم (ریاضی-فیزیک)</string>
+    <string name="grade_10_tajrobi">دهم (تجربی)</string>
+    <string name="grade_10_ensani">دهم (انسانی)</string>
+    <string name="grade_10_maaref">دهم (علوم و معارف اسلامی)</string>
+    <string name="grade_11_riazik">یازدهم (ریاضی-فیزیک)</string>
+    <string name="grade_11_tajrobi">یازدهم (تجربی)</string>
+    <string name="grade_11_ensani">یازدهم (انسانی)</string>
+    <string name="grade_11_maaref">یازدهم (علوم و معارف اسلامی)</string>
+
+
+    <string-array name="maghtae_tahsili_array">
+        <item>انتخاب کنید</item>
+        <item>@string/grade_7</item>
+        <item>@string/grade_8</item>
+        <item>@string/grade_9</item>
+        <item>@string/grade_10_riazik</item>
+        <item>@string/grade_10_tajrobi</item>
+        <item>@string/grade_10_ensani</item>
+        <item>@string/grade_10_maaref</item>
+        <item>@string/grade_11_riazik</item>
+        <item>@string/grade_11_tajrobi</item>
+        <item>@string/grade_11_ensani</item>
+        <item>@string/grade_11_maaref</item>
+    </string-array>
+
+    <!--MONTHS -->
+
+    <string name="month_farvardin">فروردین</string>
+    <string name="month_ordibehesht">اردیبهشت</string>
+    <string name="month_khordad">خرداد</string>
+    <string name="month_tir">تیر</string>
+    <string name="month_mordad">مرداد</string>
+    <string name="month_shahrivar">شهریور</string>
+    <string name="month_mehr">مهر</string>
+    <string name="month_abaan">آبان</string>
+    <string name="month_azar">آذر</string>
+    <string name="month_dey">دی</string>
+    <string name="month_bahman">بهمن</string>
+    <string name="month_esfand">اسفند</string>
+
+    <!--lessons-->
+
+    <string name="lesson_farsi">فارسی</string>
+    <string name="lesson_negaresh">نگارش</string>
+    <string name="lesson_karfanavari">کار و فناوری</string>
+    <string name="lesson_riazi">ریاضی</string>
+    <string name="lesson_oloom">علوم</string>
+    <string name="lesson_payamhayeasemani">پیام های آسمانی</string>
+    <string name="lesson_ejtemaii">اجتماعی</string>
+    <string name="lesson_farhangohonar">فرهنگ و هنر</string>
+    <string name="lesson_englisi">انگلیسی</string>
+    <string name="lesson_tafakor">فکر و سبک زندگی</string>
+    <string name="lesson_defaii">دفاعی</string>
+    <string name="lesson_arabi">عربی</string>
+    <string name="lesson_qoran">قرآن</string>
+    <string name="lesson_farsi1">فارسی ۱</string>
+    <string name="lesson_negaresh1">نگارش ۱</string>
+    <string name="lesson_dinozendegi1">دین و زندگی ۱</string>
+    <string name="lesson_ahkaam">احکام</string>
+    <string name="lesson_arabi1">عربی ۱</string>
+    <string name="lesson_fonoonadabi1">فنون ادبی ۱</string>
+    <string name="lesson_tarikh1">تاریخ ۱</string>
+    <string name="lesson_osoolaqayed1">اصول و عقاید ۱</string>
+    <string name="lesson_riazi1">ریاضی ۱</string>
+    <string name="lesson_shimi1">شیمی ۱</string>
+    <string name="lesson_amarriazi1">ریاضی و آمار ۱</string>
+    <string name="lesson_hendese1">هندسه ۱</string>
+    <string name="lesson_zist1">زیست ۱</string>
+    <string name="lesson_fizik1">فیزیک ۱</string>
+    <string name="lesson_jameshenasi1">جامعه شناسی ۱</string>
+    <string name="lesson_azmayeshgah1">آزمایشگاه ۱</string>
+    <string name="lesson_manteq">منطق</string>
+    <string name="lesson_joqrafia">جغرافیا</string>
+    <string name="lesson_honar">هنر</string>
+    <string name="lesson_karafarini">کارگاه کارآفرینی</string>
+    <string name="lesson_savadresaneii">سواد رسانه‌ایی</string>
+    <string name="lesson_englisi1">انگلیسی ۱</string>
+    <string name="lesson_tarikheslam">تاریخ اسلام</string>
+    <string name="lesson_oloomomaaref">علوم و معارف قرآنی</string>
+    <string name="lesson_akhlaqeslami1">اخلاق اسلامی ۱</string>
+    <string name="lesson_farsi2">فارسی ۲</string>
+    <string name="lesson_negaresh2">نگارش ۲</string>
+    <string name="lesson_dinozendegi2">دین و زندگی ۲</string>
+    <string name="lesson_arabi2">عربی ۲</string>
+    <string name="lesson_fonoonadabi2">فنون ادبی ۲</string>
+    <string name="lesson_fizik2">فیزیک ۲</string>
+    <string name="lesson_shimi2">شیمی ۲</string>
+    <string name="lesson_hendese2">هندسه ۲</string>
+    <string name="lesson_zist2">زیست ۲</string>
+    <string name="lesson_joqrafia2">جغرافیا ۲</string>
+    <string name="lesson_tahlilfarhangi">تحلیل فرهنگی</string>
+    <string name="lesson_hesaban1">حسابان ۱</string>
+    <string name="lesson_riazi2">ریاضی ۲</string>
+    <string name="lesson_tarikh2">تاریخ ۲</string>
+    <string name="lesson_ahkam2">احکام ۲</string>
+    <string name="lesson_amarehtemal">آمار احتمال</string>
+    <string name="lesson_zamin">زمین شناسی</string>
+    <string name="lesson_osoolaqayed">اصول عقاید ۲</string>
+    <string name="lesson_jameshenasi2">جامعه شناسی ۲</string>
+    <string name="lesson_azmayeshgah2">آرمایشگاه ۲</string>
+    <string name="lesson_ravanshenasi">روان شناسی</string>
+    <string name="lesson_tarikh">تاریخ</string>
+    <string name="lesson_englisi2">انگلیسی ۲</string>
+    <string name="lesson_ensanmohitezist">انسان و محیط زیست</string>
+    <string name="lesson_oloommaref2">علوم و معارف قرآنی ۲</string>
+    <string name="lesson_amarriazi2">ریاضی و آمار ۲</string>
+    <string name="lesson_falsafe">فلسفه</string>
+    <string name="lesson_eghtesad">اقتصاد</string>
+    <string name="lesson_osoleaghayed2">اصول عقاید ۲</string>
+    <string name="lesson_akhlaqeslami2">اخلاق اسلامی ۲</string>
+
+    <string-array name="grade_7_lessons">
+        <item>@string/lesson_farsi</item>
+        <item>@string/lesson_negaresh</item>
+        <item>@string/lesson_karafarini</item>
+        <item>@string/lesson_riazi</item>
+        <item>@string/lesson_oloom</item>
+        <item>@string/lesson_payamhayeasemani</item>
+        <item>@string/lesson_ejtemaii</item>
+        <item>@string/lesson_farhangohonar</item>
+        <item>@string/lesson_englisi</item>
+        <item>@string/lesson_tafakor</item>
+        <item>@string/lesson_arabi</item>
+        <item>@string/lesson_qoran</item>
+    </string-array>
+
+    <string-array name="grade_8_lessons">
+        <item>@string/lesson_farsi</item>
+        <item>@string/lesson_negaresh</item>
+        <item>@string/lesson_karafarini</item>
+        <item>@string/lesson_riazi</item>
+        <item>@string/lesson_oloom</item>
+        <item>@string/lesson_payamhayeasemani</item>
+        <item>@string/lesson_ejtemaii</item>
+        <item>@string/lesson_farhangohonar</item>
+        <item>@string/lesson_englisi</item>
+        <item>@string/lesson_tafakor</item>
+        <item>@string/lesson_arabi</item>
+        <item>@string/lesson_qoran</item>
+    </string-array>
+
+
+    <string-array name="grade_9_lessons">
+        <item>@string/lesson_farsi</item>
+        <item>@string/lesson_negaresh</item>
+        <item>@string/lesson_karafarini</item>
+        <item>@string/lesson_riazi</item>
+        <item>@string/lesson_oloom</item>
+        <item>@string/lesson_payamhayeasemani</item>
+        <item>@string/lesson_ejtemaii</item>
+        <item>@string/lesson_farhangohonar</item>
+        <item>@string/lesson_englisi</item>
+        <item>@string/lesson_defaii</item>
+        <item>@string/lesson_arabi</item>
+        <item>@string/lesson_qoran</item>
+    </string-array>
+
+
+    <string-array name="grade_10_riazik_lessons">
+        <item>@string/lesson_farsi1</item>
+        <item>@string/lesson_negaresh1</item>
+        <item>@string/lesson_dinozendegi1</item>
+        <item>@string/lesson_arabi1</item>
+        <item>@string/lesson_fizik1</item>
+        <item>@string/lesson_shimi1</item>
+        <item>@string/lesson_riazi1</item>
+        <item>@string/lesson_hendese1</item>
+        <item>@string/lesson_defaii</item>
+        <item>@string/lesson_azmayeshgah1</item>
+        <item>@string/lesson_joqrafia</item>
+        <item>@string/lesson_honar</item>
+        <item>@string/lesson_karafarini</item>
+        <item>@string/lesson_savadresaneii</item>
+        <item>@string/lesson_englisi1</item>
+    </string-array>
+
+    <string-array name="grade_10_tajrobi_lessons">
+        <item>@string/lesson_farsi1</item>
+        <item>@string/lesson_negaresh1</item>
+        <item>@string/lesson_dinozendegi1</item>
+        <item>@string/lesson_arabi1</item>
+        <item>@string/lesson_fizik1</item>
+        <item>@string/lesson_shimi1</item>
+        <item>@string/lesson_riazi1</item>
+        <item>@string/lesson_zist1</item>
+        <item>@string/lesson_defaii</item>
+        <item>@string/lesson_azmayeshgah1</item>
+        <item>@string/lesson_joqrafia</item>
+        <item>@string/lesson_honar</item>
+        <item>@string/lesson_karafarini</item>
+        <item>@string/lesson_savadresaneii</item>
+        <item>@string/lesson_englisi1</item>
+    </string-array>
+
+    <string-array name="grade_10_ensani_lessons">
+        <item>@string/lesson_farsi1</item>
+        <item>@string/lesson_negaresh1</item>
+        <item>@string/lesson_dinozendegi1</item>
+        <item>@string/lesson_arabi1</item>
+        <item>@string/lesson_fonoonadabi1</item>
+        <item>@string/lesson_tarikh1</item>
+        <item>@string/lesson_amarriazi1</item>
+        <item>@string/lesson_jameshenasi1</item>
+        <item>@string/lesson_defaii</item>
+        <item>@string/lesson_manteq</item>
+        <item>@string/lesson_joqrafia</item>
+        <item>@string/lesson_honar</item>
+        <item>@string/lesson_karafarini</item>
+        <item>@string/lesson_savadresaneii</item>
+        <item>@string/lesson_englisi1</item>
+    </string-array>
+
+    <string-array name="grade_10_maaref_lessons">
+        <item>@string/lesson_farsi1</item>
+        <item>@string/lesson_negaresh1</item>
+        <item>@string/lesson_ahkaam</item>
+        <item>@string/lesson_arabi1</item>
+        <item>@string/lesson_fonoonadabi1</item>
+        <item>@string/lesson_osoolaqayed1</item>
+        <item>@string/lesson_amarriazi1</item>
+        <item>@string/lesson_jameshenasi1</item>
+        <item>@string/lesson_defaii</item>
+        <item>@string/lesson_manteq</item>
+        <item>@string/lesson_joqrafia</item>
+        <item>@string/lesson_honar</item>
+        <item>@string/lesson_karafarini</item>
+        <item>@string/lesson_savadresaneii</item>
+        <item>@string/lesson_englisi1</item>
+        <item>@string/lesson_tarikheslam</item>
+        <item>@string/lesson_oloomomaaref</item>
+        <item>@string/lesson_akhlaqeslami1</item>
+    </string-array>
+
+    <string-array name="grade_11_riazik_lessons">
+        <item>@string/lesson_honar</item>
+        <item>@string/lesson_karafarini</item>
+        <item>@string/lesson_savadresaneii</item>
+        <item>@string/lesson_farsi2</item>
+        <item>@string/lesson_negaresh2</item>
+        <item>@string/lesson_dinozendegi2</item>
+        <item>@string/lesson_arabi2</item>
+        <item>@string/lesson_fizik2</item>
+        <item>@string/lesson_shimi2</item>
+        <item>@string/lesson_hendese2</item>
+        <item>@string/lesson_hesaban1</item>
+        <item>@string/lesson_amarehtemal</item>
+        <item>@string/lesson_azmayeshgah2</item>
+        <item>@string/lesson_tarikh</item>
+        <item>@string/lesson_englisi2</item>
+        <item>@string/lesson_zamin</item>
+        <item>@string/lesson_ensanmohitezist</item>
+    </string-array>
+
+    <string-array name="grade_11_tajrobi_lessons">
+        <item>@string/lesson_honar</item>
+        <item>@string/lesson_karafarini</item>
+        <item>@string/lesson_savadresaneii</item>
+        <item>@string/lesson_farsi2</item>
+        <item>@string/lesson_negaresh2</item>
+        <item>@string/lesson_dinozendegi2</item>
+        <item>@string/lesson_arabi2</item>
+        <item>@string/lesson_fizik2</item>
+        <item>@string/lesson_shimi2</item>
+        <item>@string/lesson_zist2</item>
+        <item>@string/lesson_riazi2</item>
+        <item>@string/lesson_zamin</item>
+        <item>@string/lesson_azmayeshgah2</item>
+        <item>@string/lesson_tarikh</item>
+        <item>@string/lesson_englisi2</item>
+        <item>@string/lesson_ensanmohitezist</item>
+    </string-array>
+
+    <string-array name="grade_11_ensani_lessons">
+        <item>@string/lesson_honar</item>
+        <item>@string/lesson_karafarini</item>
+        <item>@string/lesson_savadresaneii</item>
+        <item>@string/lesson_farsi2</item>
+        <item>@string/lesson_negaresh2</item>
+        <item>@string/lesson_dinozendegi2</item>
+        <item>@string/lesson_arabi2</item>
+        <item>@string/lesson_fonoonadabi2</item>
+        <item>@string/lesson_amarriazi2</item>
+        <item>@string/lesson_joqrafia2</item>
+        <item>@string/lesson_tarikh2</item>
+        <item>@string/lesson_jameshenasi2</item>
+        <item>@string/lesson_ravanshenasi</item>
+        <item>@string/lesson_falsafe</item>
+        <item>@string/lesson_englisi2</item>
+        <item>@string/lesson_ensanmohitezist</item>
+    </string-array>
+
+    <string-array name="grade_11_maaref_lessons">
+        <item>@string/lesson_honar</item>
+        <item>@string/lesson_karafarini</item>
+        <item>@string/lesson_savadresaneii</item>
+        <item>@string/lesson_farsi2</item>
+        <item>@string/lesson_negaresh2</item>
+        <item>@string/lesson_eghtesad</item>
+        <item>@string/lesson_arabi2</item>
+        <item>@string/lesson_fonoonadabi2</item>
+        <item>@string/lesson_amarriazi2</item>
+        <item>@string/lesson_tahlilfarhangi</item>
+        <item>@string/lesson_ahkam2</item>
+        <item>@string/lesson_osoleaghayed2</item>
+        <item>@string/lesson_ravanshenasi</item>
+        <item>@string/lesson_falsafe</item>
+        <item>@string/lesson_englisi2</item>
+        <item>@string/lesson_ensanmohitezist</item>
+        <item>@string/lesson_akhlaqeslami2</item>
+        <item>@string/lesson_oloommaref2</item>
+    </string-array>
+
+    <!-- Calendar -->
+    <string name="calendar_label">تقویم</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

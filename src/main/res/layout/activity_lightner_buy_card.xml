@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LightnerBuyCard">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/lightner_buy_new_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activity_lightner_buy_new_name_1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:text="@string/activity_lightner_buy_new_name_1"
+                android:textColor="@color/colorWhite"
+                android:gravity="center_vertical|right"
+                android:textSize="13.5dp"
+                android:layout_marginRight="@dimen/activity_name_mr"/>
+
+            <TextView
+                android:id="@+id/activity_lightner_buy_new_name_2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/activity_lightner_buy_new_name_2"
+                android:textColor="@color/colorWhite"
+                android:gravity="top|right"
+                android:textSize="11dp"
+                android:layout_marginRight="@dimen/activity_name_mr"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3.5"
+        android:background="@color/colorOrangeDark">
+
+        <TextView
+            android:id="@+id/lightner_buy_new_txt_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:gravity="right|center_vertical"
+            android:text="@string/txt_bargehayeshoma"
+            android:textColor="@color/colorWhite"
+            android:textSize="13dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/buy_word_papers_left_count"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/lightner_buy_new_txt_1"
+            android:padding="2dp"
+            android:gravity="center"
+            android:text="46"
+            android:textColor="@color/colorWhite"
+            android:textSize="120dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lightner_buy_new_50_layer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorGreenLight"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/lightner_buy_new_txt_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/txt_lightner_buy_50"
+            android:textColor="@color/colorWhite"
+            android:textSize="14.5dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_chevron_left_white_65dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lightner_buy_new_100_layer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorRed"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/lightner_buy_new_txt_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/txt_lightner_buy_100"
+            android:textColor="@color/colorWhite"
+            android:textSize="14.5dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_chevron_left_white_65dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lightner_buy_new_200_layer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorBlueNormal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/lightner_buy_new_txt_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/txt_lightner_buy_200"
+            android:textColor="@color/colorWhite"
+            android:textSize="14.5dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_chevron_left_white_65dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

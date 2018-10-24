@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.goharshad.arena.sakoo.Purposing">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/purposing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorDark_1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|right">
+
+                <TextView
+                    android:id="@+id/purposing_activity_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/activity_purposing_name"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/activity_name_size"
+                    android:layout_marginRight="@dimen/activity_name_mr"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/purposing_intro_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/purposing_toolbar"
+            android:layout_margin="12dp"
+            android:text="در این قسمت می توانید با توجه به مدت زمانی که برای درس خواندن در اختیار دارید ، ساعت مطالعه پیشنهادی خود را دریافت کنید و با کم یا زیاد کردن آن به صورت منطقی و به راحتی به آن برسید."
+            android:textColor="@color/colorDark_1"
+            android:textSize="14.5dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/purposing_intro_text"
+            android:layout_margin="1dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.15"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/purposing_header_hadaf_shoma"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="هدف شما"
+                    android:textSize="@dimen/purposing_global_font"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/purposing_header_pishnohad_ma"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:layout_margin="1dp"
+                    android:text="پیشنهاد ما"
+                    android:textSize="@dimen/purposing_global_font"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/purposing_header_zaman_dar_dastress"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="زمان در دسترس"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/purposing_header_rooz_hafte"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="روز هفته"
+                    android:textSize="@dimen/purposing_global_font"
+                    android:textColor="@color/colorWhite" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_marginTop="1dp">
+
+                <TextView
+                    android:id="@+id/your_purpose_time_saturday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorBlueLight"
+                    android:gravity="center"
+                    android:textSize="@dimen/purposing_global_font"
+                    android:textColor="@color/colorDark_1" />
+
+                <TextView
+                    android:id="@+id/suggested_time_saturday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorBlueLight"
+                    android:gravity="center"
+                    android:textSize="@dimen/purposing_global_font"
+                    android:textColor="@color/colorDark_1" />
+
+                <TextView
+                    android:id="@+id/available_time_saturday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorBlueLight"
+                    android:gravity="center"
+                    android:textSize="@dimen/purposing_global_font"
+                    android:textColor="@color/colorDark_1" />
+
+                <TextView
+                    android:id="@+id/purposing_weekday_saturday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorBlueLight"
+                    android:gravity="center"
+                    android:textSize="@dimen/purposing_weekday_font"
+                    android:text="@string/weekday_saturday"
+                    android:textColor="@color/colorDark"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_marginTop="1dp">
+
+                <TextView
+                    android:id="@+id/your_purpose_time_sunday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorGray"
+                    android:gravity="center"
+                    android:textSize="@dimen/purposing_global_font"
+                    android:textColor="@color/colorDark_1" />
+
+                <TextView
+                    android:id="@+id/suggested_time_sunday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorGray"
+                    android:gravity="center"
+                    android:textSize="@dimen/purposing_global_font"
+                    android:textColor="@color/colorDark_1" />
+
+                <TextView
+                    android:id="@+id/available_time_sunday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorGray"
+                    android:gravity="center"
+                    android:textSize="@dimen/purposing_global_font"
+                    android:textColor="@color/colorDark_1" />
+
+                <TextView
+                    android:id="@+id/purposing_weekday_sunday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorGray"
+                    android:gravity="center"
+                    android:text="@string/weekday_sunday"
+                    android:textSize="@dimen/purposing_weekday_font"
+                    android:textColor="@color/colorDark"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_marginTop="1dp">
+
+                <TextView
+                    android:id="@+id/your_purpose_time_monday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorBlueLight"
+                    android:gravity="center"
+                    android:textSize="@dimen/purposing_global_font"
+                    android:textColor="@color/colorDark_1"/>
+
+                <TextView
+                    android:id="@+id/suggested_time_monday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorBlueLight"
+                    android:gravity="center"
+                    android:textSize="@dimen/purposing_global_font"
+                    android:textColor="@color/colorDark_1" />
+
+                <TextView
+                    android:id="@+id/available_time_monday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorBlueLight"
+                    android:gravity="center"
+                    android:textSize="@dimen/purposing_global_font"
+                    android:textColor="@color/colorDark_1" />
+
+                <TextView
+                    android:id="@+id/purposing_weekday_monday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorBlueLight"
+                    android:gravity="center"
+                    android:text="@string/weekday_monday"
+                    android:textSize="@dimen/purposing_weekday_font"
+                    android:textColor="@color/colorDark"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_marginTop="1dp">
+
+                <TextView
+                    android:id="@+id/your_purpose_time_tuesday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorGray"
+                    android:gravity="center"
+                    android:textSize="@dimen/purposing_global_font"
+                    android:textColor="@color/colorDark_1" />
+
+                <TextView
+                    android:id="@+id/suggested_time_tuesday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorGray"
+                    android:gravity="center"
+                    android:textSize="@dimen/purposing_global_font"
+                    android:textColor="@color/colorDark_1" />
+
+                <TextView
+                    android:id="@+id/available_time_tuesday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorGray"
+                    android:gravity="center"
+                    android:textSize="@dimen/purposing_global_font"
+                    android:textColor="@color/colorDark_1" />
+
+                <TextView
+                    android:id="@+id/purposing_weekday_tuesday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorGray"
+                    android:gravity="center"
+                    android:text="@string/weekday_tuesday"
+                    android:textSize="@dimen/purposing_weekday_font"
+                    android:textColor="@color/colorDark"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_marginTop="1dp">
+
+                <TextView
+                    android:id="@+id/your_purpose_time_wednesday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorBlueLight"
+                    android:gravity="center"
+                    android:textSize="@dimen/purposing_global_font"
+                    android:textColor="@color/colorDark_1"/>
+
+                <TextView
+                    android:id="@+id/suggested_time_wednesday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorBlueLight"
+                    android:gravity="center"
+                    android:textSize="@dimen/purposing_global_font"
+                    android:textColor="@color/colorDark_1" />
+
+                <TextView
+                    android:id="@+id/available_time_wednesday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorBlueLight"
+                    android:gravity="center"
+                    android:textSize="@dimen/purposing_global_font"
+                    android:textColor="@color/colorDark_1" />
+
+                <TextView
+                    android:id="@+id/purposing_weekday_wednesday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorBlueLight"
+                    android:gravity="center"
+                    android:text="@string/weekday_wednesday"
+                    android:textSize="@dimen/purposing_weekday_font"
+                    android:textColor="@color/colorDark"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_marginTop="1dp">
+
+                <TextView
+                    android:id="@+id/your_purpose_time_thursday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorGray"
+                    android:gravity="center"
+                    android:textSize="@dimen/purposing_global_font"
+                    android:textColor="@color/colorDark_1" />
+
+                <TextView
+                    android:id="@+id/suggested_time_thursday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorGray"
+                    android:gravity="center"
+                    android:textSize="@dimen/purposing_global_font"
+                    android:textColor="@color/colorDark_1" />
+
+                <TextView
+                    android:id="@+id/available_time_thursday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorGray"
+                    android:gravity="center"
+                    android:textSize="@dimen/purposing_global_font"
+                    android:textColor="@color/colorDark_1" />
+
+                <TextView
+                    android:id="@+id/purposing_weekday_thursday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorGray"
+                    android:gravity="center"
+                    android:text="@string/weekday_thursday"
+                    android:textSize="@dimen/purposing_weekday_font"
+                    android:textColor="@color/colorDark"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_marginTop="1dp">
+
+                <TextView
+                    android:id="@+id/your_purpose_time_friday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorBlueLight"
+                    android:gravity="center"
+                    android:textSize="@dimen/purposing_global_font"
+                    android:textColor="@color/colorDark_1" />
+
+                <TextView
+                    android:id="@+id/suggested_time_friday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorBlueLight"
+                    android:gravity="center"
+                    android:textSize="@dimen/purposing_global_font"
+                    android:textColor="@color/colorDark_1" />
+
+                <TextView
+                    android:id="@+id/available_time_friday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorBlueLight"
+                    android:gravity="center"
+                    android:textSize="@dimen/purposing_global_font"
+                    android:textColor="@color/colorDark_1" />
+
+                <TextView
+                    android:id="@+id/purposing_weekday_friday"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorBlueLight"
+                    android:gravity="center"
+                    android:text="@string/weekday_friday"
+                    android:textSize="@dimen/purposing_weekday_font"
+                    android:textColor="@color/colorDark"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/purposing_btn_finish"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.1"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/colorGreenNormal"
+                android:textColor="@color/colorWhite"
+                android:textSize="19dp"
+                android:text="تموم شد !"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/time_picker_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eeeeeeff"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone">
+
+        <TimePicker
+            android:id="@+id/time_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/time_picker">
+
+            <ImageView
+                android:id="@+id/purposing_back_btn_nok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/delete"
+                android:layout_gravity="center_vertical" />
+
+            <ImageView
+                android:id="@+id/purposing_back_btn_ok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/checked"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

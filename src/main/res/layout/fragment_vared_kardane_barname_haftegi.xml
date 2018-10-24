@@ -1,0 +1,227 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/vared_kardane_barname_haftegi_container"
+    tools:context="com.goharshad.arena.sakoo.VaredKardaneBarnameHaftegi"
+    android:background="@drawable/rounded_rectangle_white1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/vared_kardane_barname_haftegi_fragment"
+        android:tag="aaa">
+
+        <include layout="@layout/fragment_header"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="#ffffff"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/vared_barname_haftegi_txt_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="مقطع تحصیلی شما :"
+                    android:textColor="@color/main_text_color2"
+                    android:textSize="12.75dp" />
+
+                <Spinner
+                    android:id="@+id/vared_kardane_barname_haftegi_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/rounded_rectangle_gray"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:spinnerMode="dropdown"
+                    android:layout_toLeftOf="@id/vared_barname_haftegi_txt_1"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/fragment_vared_barname_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/roundeed_rectangle_blue_1"
+                    android:text="درس های شما"
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite"/>
+
+            </RelativeLayout>
+
+            <!--<ImageView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!---->
+                <!--android:adjustViewBounds="true"-->
+                <!--android:src="@drawable/darshaye_shoma"/>-->
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="4dp">
+
+            <LinearLayout
+                android:id="@+id/vared_kardane_barname_haftegi_rahnama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="25dp"
+                android:weightSum="7"
+                android:background="@drawable/rounded_right_rectangle_green">
+                <TextView
+                    android:id="@+id/vared_kardane_barname_haftegi_rahnama_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5.75"
+                    android:text="@string/txt_entekhabemaqta"
+                    android:textColor="@color/main_text_color1"
+                    android:textSize="@dimen/menu_text_Normal"
+                    android:background="@drawable/rounded_left_rectangle_green"
+                    android:gravity="center"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="center"
+                    android:layout_weight="1.25"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:src="@drawable/ic_arrow_upward_black_24dp"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/vared_kardane_barname_haftegi_doros_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:id="@+id/vared_kardane_barname_haftegi_doros"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                </LinearLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/vared_kardane_barname_haftegi_ezafe_kardane_dars"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:weightSum="7">
+            <TextView
+                android:id="@+id/vared_kardane_barname_haftegi_dars_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5.75"
+                android:text="اضافه کردن درس"
+                android:textColor="@color/main_text_color1"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_left_rectangle_blue"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/vared_kardane_barname_haftegi_dars_plus"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.25"
+                android:text="+"
+                android:textColor="@color/main_text_color1"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_right_rectangle_green_1"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vared_kardane_barname_haftegi_raftan_be_marhale_2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="25dp"
+            android:weightSum="7"
+            android:background="@drawable/rounded_rectangle_hotred">
+            <TextView
+                android:id="@+id/vared_kardane_barname_haftegi_raftan_be_marhale_2_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5.75"
+                android:text="بریم مرحله بعدی"
+                android:textColor="@color/main_text_color1"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_left_rectangle_orange"
+                android:gravity="center"/>
+            <ImageView
+                android:id="@+id/vared_kardane_barname_haftegi_raftan_be_marhale_2_iv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:layout_weight="1.25"
+                android:src="@drawable/ic_arrow_forward_black_24dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/vared_kardane_barname_haftegi_make_bg_dark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"></LinearLayout>
+
+</RelativeLayout>
+

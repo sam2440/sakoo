@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.goharshad.arena.sakoo.DailyReport"
+    android:background="@color/colorLightGray">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/dailyreporttoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#232323">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|right">
+
+            <TextView
+                android:id="@+id/daily_report_activity_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/activity_name_mr"
+                android:text="@string/activity_daily_report_name"
+                android:textColor="@android:color/white"
+                android:textSize="17dp" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/dailyreporttoolbar">
+
+        <TextView
+            android:id="@+id/daily_report_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/history_gray"
+            android:gravity="right|center_vertical"
+            android:padding="20dp"
+            android:text="  گزارش روزانه"
+            android:textColor="@color/colorGray_1"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/daily_report_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/daily_report_header"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"></android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/daily_report_no_report_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_rectangle_white1"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/colorGreenDark"
+            android:text="هنوز گزارش تکلیفی ثبت نشده است"
+            android:padding="4dp"
+            android:gravity="center"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>

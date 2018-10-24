@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/second_slide_bg_color">
+
+    <RelativeLayout
+        android:id="@+id/first_launch_space_between"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@id/first_launch_space_between">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight=".75"/>
+
+        <RelativeLayout
+            android:id="@+id/firat_lanch_slide_ui"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4">
+
+            <ImageView
+                android:id="@+id/slide_2_circle_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/slide_2_circle_1"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="true"
+                android:scaleY="0"
+                android:scaleX="0"/>
+
+            <ImageView
+                android:id="@+id/slide_2_circle_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/slide_2_circle_2"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="true"
+                android:padding="35dp"
+                android:scaleY="0"
+                android:scaleX="0"/>
+
+            <!--<ImageView-->
+            <!--android:id="@+id/slide_2_circle_3"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/slide_2_circle_3"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:adjustViewBounds="true"/>-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/slide_2_circle_4"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/slide_2_circle_4"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:adjustViewBounds="true" />-->
+
+            <ImageView
+                android:id="@+id/slide_2_circle_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/slide_2_circle_5"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="true"
+                android:scaleY="0"
+                android:scaleX="0"/>
+
+            <ImageView
+                android:id="@+id/slide_2_circle_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/slide_2_circle_6"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="true"
+                android:scaleY="0"
+                android:scaleX="0"/>
+
+            <ImageView
+                android:id="@+id/slide_2_circle_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/slide_2_circle_7"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="true"
+                android:scaleY="0"
+                android:scaleX="0"/>
+
+            <!--<ImageView-->
+                <!--android:id="@+id/slide_2_pencil"-->
+                <!--android:layout_width="150dp"-->
+                <!--android:layout_height="150dp"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:adjustViewBounds="true"-->
+                <!--android:rotation="45"-->
+                <!--android:src="@drawable/pencil"-->
+                <!--android:alpha="1"-->
+                <!--android:layout_marginTop="5dp"/>-->
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/first_launch_slide_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/slide_title_mt"
+            android:layout_marginBottom="@dimen/slide_title_mb"
+            android:text="@string/slide_2_title"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorWhite"
+            android:translationY="10dp"
+            android:alpha="0"/>
+
+        <TextView
+            android:id="@+id/first_launch_slide_txt"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.3"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:translationY="10dp"
+            android:alpha="0"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_top_rectangle_dark"
+    android:gravity="center"
+    android:paddingBottom="7.5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="7.5dp">
+
+    <ImageView
+        android:id="@+id/vared_kardane_barname_haftegi_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:scaleType="centerInside"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_arrow_back_black_37dp" />
+
+    <TextView
+        android:id="@+id/fragment_header_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:text="وارد کردن برنامه هفتگی"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/menu_text_Medium" />
+
+</RelativeLayout>
+
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="0dp"-->
+    <!--android:background="#3b3838"-->
+    <!--android:padding="6dp">-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/vared_kardane_barname_haftegi_back"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:scaleType="fitCenter"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_weight="0.25"-->
+        <!--android:src="@drawable/ic_arrow_back_black_37dp"/>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/fragment_header_txt"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_alignBottom="@+id/vared_kardane_barname_haftegi_back"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:layout_weight="3.5"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:text="وارد کردن برنامه هفتگی"-->
+        <!--android:textColor="@color/main_text_color1"-->
+        <!--android:textSize="@dimen/menu_text_Normal" />-->
+
+<!--</LinearLayout>-->
+

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/forth_slide_bg_color">
+
+    <RelativeLayout
+        android:id="@+id/first_launch_space_between"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"></RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/first_launch_space_between"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight=".75" />
+
+        <RelativeLayout
+            android:id="@+id/firat_lanch_slide_ui"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4">
+
+            <ImageView
+                android:id="@+id/slide_4_circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:scaleX="0"
+                android:scaleY="0"
+                android:src="@drawable/slide_4_circle" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="60dp">
+
+                <ImageView
+                    android:id="@+id/slide_4_signal_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"                android:layout_centerHorizontal="true"
+                    android:src="@drawable/wifi_singal_circle"
+                    android:alpha="0"
+                    android:padding="3dp"
+                    android:translationY="-20dp"/>
+
+                <ImageView
+                    android:id="@+id/slide_4_signal_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/wifi_signal_line_2"
+                    android:padding="3dp"
+                    android:alpha="0"
+                    android:translationY="-20dp"/>
+
+                <ImageView
+                    android:id="@+id/slide_4_signal_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/wifi_signal_line_3"
+                    android:padding="3dp"
+                    android:alpha="0"
+                    android:translationY="-20dp"/>
+
+                <ImageView
+                    android:id="@+id/slide_4_signal_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/wifi_signal_line_1"
+                    android:padding="3dp"
+                    android:alpha="0"
+                    android:translationY="-20dp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/first_launch_slide_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/slide_title_mb"
+            android:layout_marginTop="@dimen/slide_title_mt"
+            android:gravity="center"
+            android:text="@string/slide_4_title"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorWhite"
+            android:translationY="10dp"
+            android:alpha="0"/>
+
+        <TextView
+            android:id="@+id/first_launch_slide_txt"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.3"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:translationY="10dp"
+            android:alpha="0"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

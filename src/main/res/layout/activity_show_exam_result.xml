@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffebeb"
+    tools:context="com.goharshad.arena.sakoo.ShowExamResult">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/show_results_exam_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#232323"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|right">
+
+            <TextView
+                android:id="@+id/show_results_activity_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/activity_name_mr"
+                android:text="@string/activity_show_results_name"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/activity_name_size" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="right"
+        android:background="@drawable/rounded_rectangle_white"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="@dimen/activity_name_mr"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="right">
+                <TextView
+                    android:id="@+id/show_exam_result_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:textSize="@dimen/menu_text_Normal"
+                    android:textColor="#000000"
+                    android:gravity="right"
+                    />
+                <TextView
+                    android:id="@+id/ans_showres_txt_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="نام آزمون : "
+                    android:textSize="@dimen/menu_text_Normal"
+                    android:textColor="#000000"
+                    android:gravity="right"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="@dimen/activity_name_mr"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="right">
+                <TextView
+                    android:id="@+id/show_exam_result_with_negetive_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:textSize="@dimen/menu_text_Normal"
+                    android:textColor="#000000"
+                    android:gravity="right"
+                    />
+                <TextView
+                    android:id="@+id/ans_showres_txt_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="درصد با نمره منفی : "
+                    android:textSize="@dimen/menu_text_Normal"
+                    android:textColor="#000000"
+                    android:gravity="right"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="@dimen/activity_name_mr"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="right">
+                <TextView
+                    android:id="@+id/show_exam_result_without_negetive_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:textSize="@dimen/menu_text_Normal"
+                    android:textColor="#000000"
+                    android:gravity="right"
+                    />
+                <TextView
+                    android:id="@+id/ans_showres_txt_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="درصد بدون نمره منفی : "
+                    android:textSize="@dimen/menu_text_Normal"
+                    android:textColor="#000000"
+                    android:gravity="right"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="@dimen/activity_name_mr"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="right">
+                <TextView
+                    android:id="@+id/show_exam_result_total_questions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:textSize="@dimen/menu_text_Normal"
+                    android:textColor="#000000"
+                    android:gravity="right"
+                    />
+                <TextView
+                    android:id="@+id/ans_showres_txt_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="کل سوالات : "
+                    android:textSize="@dimen/menu_text_Normal"
+                    android:textColor="#000000"
+                    android:gravity="right"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/show_exam_result_not_answered"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#898585"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/menu_text_Normal"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                />
+            <TextView
+                android:id="@+id/show_exam_result_wrong_answer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ea2d23"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/menu_text_Normal"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"/>
+            <TextView
+                android:id="@+id/show_exam_result_right_answer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#298911"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/menu_text_Normal"
+                android:gravity="center"
+                android:padding="3dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"/>
+
+
+        </LinearLayout>
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/show_exam_result_pie_chart"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</LinearLayout>

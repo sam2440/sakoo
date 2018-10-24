@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5568da</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#24b007</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorPurple">#d43d77</color>
+    <color name="colorPurple_1">#880e4f</color>
+    <color name="colorBlack">#302d2d</color>
+    <color name="colorDark">#515151</color>
+    <color name="colorDark_1">#232323</color>
+    <color name="colorDark_2">#505050</color>
+    <color name="colorDark_3">#3d3d3d</color>
+    <color name="colorGreenLight">#63d146</color>
+    <color name="colorGreenNormal">#00ad03</color>
+    <color name="colorGreenDark">#24b007</color>
+    <color name="colorOrangeLight">#ff9f26</color>
+    <color name="colorOrangeNormal">#ff8e00</color>
+    <color name="colorOrangeBright">#ff7a00</color>
+    <color name="colorOrangeDark">#ffad01</color>
+    <color name="colorOrangeDarker">#f46523</color>
+    <color name="colorPurpleDark">#9000c4</color>
+    <color name="colorPurpleDarker">#894085</color>
+    <color name="colorPurpleDarker_1">#71216e</color>
+    <color name="colorGreenBlue">#06a882</color>
+    <color name="colorRed">#ed1b24</color>
+    <color name="colorDarkRed">#b71c1c</color>
+    <color name="colorGreenBlue_1">#0abcad</color>
+    <color name="colorGreenBlue_2">#00a884</color>
+    <color name="colorBlueLight">#00aeef</color>
+    <color name="colorBlueNormal">#0072bb</color>
+    <color name="colorGray">#cfcfcf</color>
+    <color name="colorGray_1">#a7a7a7</color>
+    <color name="colorLightGray">#d4d4d4</color>
+    <color name="colorGreenGrass">#00a650</color>
+    <color name="colorYellow">#ffe850</color>
+    <color name="colorHotRed">#f12a23</color>
+    <!--slides-->
+    <color name="slider1">#63af25</color>
+    <color name="slider2">#854dd1</color>
+    <color name="slider3">#fea72a</color>
+    <color name="slider4">#02afda</color>
+    <color name="slider5">#f12a23</color>
+    <color name="slider6">#4e6b7a</color>
+    <color name="slider7">#d10a6a</color>
+    <color name="slider8">#854dd1</color>
+
+    <!--mainPage-->
+
+    <!--ActionBar-->
+    <color name="toolbar_bg">#232323</color>
+
+    <color name="main_bg">#eeeeee</color>
+    <color name="main_day_bg">#fdfdfd</color>
+    <color name="today_date_bg">#fad448</color>
+    <color name="main_subject_text_color">#e41616</color>
+    <color name="main_checkBox_bg">#25cc0f</color>
+    <color name="main_motalee_mofid_text">#FF9F26</color>
+    <color name="main_miangine_mahane_text">#9000C4</color>
+    <color name="main_majmoe_haftegi_text">#00A884</color>
+    <color name="main_moadel_rotbe_text">#848484</color>
+    <color name="main_moshaver_bg">#ef7d1f</color>
+    <color name="main_moshaver_name_bg">#53c1d2</color>
+    <color name="main_moshaver_text_bg">#8f8787</color>
+    <color name="main_text_color1">#ffffff</color>
+    <color name="main_text_color2">#232323</color>
+    <color name="main_text_color3">#515151</color>
+
+    <!--varedKardaneDarseZang-->
+    <color name="dars_title">#3b3838</color>
+    <color name="entekhab_dars_baraye_zang_rooz">#192a97</color>
+    <color name="entekhab_dars_baraye_zang_zang">#a9aaaf</color>
+    <color name="entekhab_dars_baraye_zang_dars">#f1e212</color>
+    <color name="entekhab_dars_baraye_zang_btn">#12f137</color>
+    <color name="entekhab_dars_baraye_zang_bg">#f2f1ec</color>
+    <color name="entekhab_dars_baraye_zang_linear_bg">#ffffff</color>
+    <color name="entekhab_dars_inner_dark_bg">#2a101010</color>
+
+    <!--VaredKardaneZang-->
+    <color name="entekhabe_dars_bg">#f7eb04</color>
+
+    <!-- first launch slides -->
+    <color name="first_slide_bg_color">#62af23</color>
+    <color name="second_slide_bg_color">#844cd1</color>
+    <color name="third_slide_bg_color">#fea628</color>
+    <color name="forth_slide_bg_color">#00afda</color>
+    <color name="fifth_slide_bg_color">#f12821</color>
+    <color name="sixth_slide_bg_color">#4d6a79</color>
+    <color name="seventh_slide_bg_color">#e14650</color>
+
+
+    <color name="color_theme_1">#6200ee</color>
+    <color name="color_theme_2">#2f0097</color>
+    <color name="color_theme_3">#03dac6</color>
+    <color name="color_theme_4">#018786</color>
+    <color name="color_theme_5">#c51162</color>
+
+</resources>

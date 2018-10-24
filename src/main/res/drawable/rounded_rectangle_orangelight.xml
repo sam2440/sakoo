@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<gradient-->
+        <!--android:endColor="@color/colorHotRed"-->
+        <!--android:centerColor="@color/colorHotRed"-->
+        <!--android:startColor="@color/colorHotRed"-->
+        <!--android:angle="270" />-->
+    <solid android:color="@color/colorGreenNormal"/>
+    <corners
+        android:radius="8dp" />
+    <padding
+        android:left="0dp"
+        android:top="0dp"
+        android:right="0dp"
+        android:bottom="0dp" />
+</shape>
