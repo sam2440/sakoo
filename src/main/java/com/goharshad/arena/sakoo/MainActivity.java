@@ -38,8 +38,6 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.TimePicker;
-import android.widget.Toast;
-
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -48,10 +46,11 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import ir.huri.jcal.JalaliCalendar;
+
 import static android.view.View.GONE;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener, OnFragmentRemoved, OnFragmentLessonSelected, OnWeeklyScheduleEntered, TimePicker.OnTimeChangedListener, View.OnLongClickListener, OnBazdehiUpdateListener {
+        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener, OnFragmentRemoved, OnFragmentLessonSelected, OnWeeklyScheduleEntered, TimePicker.OnTimeChangedListener, OnBazdehiUpdateListener {
 
     private TextView mainPageAdvice, barnameHaftegiVaredKonim, takalifMan, taklifManAfter, taklifManAfter1, motaleEmrooz, todayDatePersianDay, todayDatePersianMonth, notifCount,
             calendarToday, calendarNextday, calendarNextday2, calendarNextday3, inFlagTime, inProgressTime;
@@ -68,7 +67,7 @@ public class MainActivity extends AppCompatActivity
     private TaklifAdapter takalifFardaAdapter, takalifEmroozAdapter, takalifJamondeAdapter;
     private List<Taklif> takalifFardaList, takalifEmroozList, takalifJamondeList;
     private ImageView drawerToggler, ezafeKardaneTaklifeRooz, btnNotif, btnInfo, btnCalendar, motaleEmroozMoreAdd;
-    private ImageView btnPickTime , moshaverImg;
+    private ImageView btnPickTime, moshaverImg;
     private ImageView btnPickNoTime;
     private Toolbar toolbar;
     private DrawerLayout drawer;
@@ -82,7 +81,7 @@ public class MainActivity extends AppCompatActivity
     private JalaliCalendar date;
 
     private int currentTime = 0, timePicked;
-    private String weekdayStr=null;
+    private String weekdayStr = null;
     public boolean isToAddMoreStudy = false, backPressed, isToUpdateStudyTime = false, isToUndoTaklifDone = false;
     private String studiedLesson = null;
 
@@ -126,15 +125,12 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         backPressed = false;
-        date=new JalaliCalendar();
-        weekdayStr=date.getDayOfWeekString();
+        date = new JalaliCalendar();
+        weekdayStr = date.getDayOfWeekString();
         lessonDatabase = new LessonDatabase(this);
         taklifDatabase = new TaklifDatabase(MainActivity.this);
         purposingDatabase = new PurposingDatabase(MainActivity.this);
         preferenceManager = new PreferencesManager(this);
-        lessonDatabase.map();
-        taklifDatabase.map();
-        purposingDatabase.map();
         findViews();
         initMenuItems();
         setFonts();
@@ -231,9 +227,7 @@ public class MainActivity extends AppCompatActivity
     private void initListeners() {
         drawerToggler.setOnClickListener(this);
         barnameHaftegiVaredKonim.setOnClickListener(this);
-        barnameHaftegiVaredKonim.setOnLongClickListener(this);
         ezafeKardaneTaklifeRooz.setOnClickListener(this);
-        btnInfo.setOnClickListener(this);
         taklifVaredKonidContainer.setOnClickListener(this);
         btnPickTime.setOnClickListener(this);
         btnPickNoTime.setOnClickListener(this);
@@ -414,8 +408,6 @@ public class MainActivity extends AppCompatActivity
         todayDatePersianMonth.setTypeface(iransansTF);
         taklifManAfter.setTypeface(iransansTF);
         taklifManAfter1.setTypeface(iransansTF);
-//        btnPickTime.setTypeface(iransansTF);
-//        btnPickNoTime.setTypeface(iransansTF);
         calendarToday.setTypeface(iransansTF);
         calendarNextday.setTypeface(iransansTF);
         calendarNextday2.setTypeface(iransansTF);
@@ -463,9 +455,7 @@ public class MainActivity extends AppCompatActivity
                 drawerItemLightner, drawerItemPercent, drawerItemAnswersheet, drawerItemPurposing, drawerItemCharts, drawerItemGuide,
                 drawerItemSuport, drawerItemSuggestions, drawerItemAbout;
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/IRAN-SANS.TTF");
-//        drawerUsername = (TextView) drawerView.findViewById(R.id.drawer_user_name);
         drawerGrade = (TextView) drawerView.findViewById(R.id.drawer_item_grade);
-//        drawerSchool = (TextView) drawerView.findViewById(R.id.drawer_school);
         drawerItemGroupTools = (TextView) drawerView.findViewById(R.id.drawer_item_group_tools);
         drawerItemGroupSpeedBox = (TextView) drawerView.findViewById(R.id.drawer_item_group_speedbox);
         drawerItemGroupTogether = (TextView) drawerView.findViewById(R.id.drawer_item_group_together);
@@ -479,9 +469,7 @@ public class MainActivity extends AppCompatActivity
         drawerItemSuggestions = (TextView) drawerView.findViewById(R.id.drawer_item_comments);
         drawerItemAbout = (TextView) drawerView.findViewById(R.id.drawer_item_location);
 
-//        drawerUsername.setTypeface(typeface);
         drawerGrade.setTypeface(typeface);
-//        drawerSchool.setTypeface(typeface);
         drawerItemGroupTools.setTypeface(typeface);
         drawerItemGroupSpeedBox.setTypeface(typeface);
         drawerItemGroupTogether.setTypeface(typeface);
@@ -573,51 +561,37 @@ public class MainActivity extends AppCompatActivity
         takalifJamondeContainer.setDividerHeight(0);
     }
 
-    private String getDayOfWeek(int weekDay) {
-        backPressed = false;
-        switch (weekDay) {
-            case 1:
-                return getResources().getString(R.string.weekday_saturday);
-            case 2:
-                return getResources().getString(R.string.weekday_sunday);
-            case 3:
-                return getResources().getString(R.string.weekday_monday);
-            case 4:
-                return getResources().getString(R.string.weekday_tuesday);
-            case 5:
-                return getResources().getString(R.string.weekday_wednesday);
-            case 6:
-                return getResources().getString(R.string.weekday_thursday);
-            case 7:
-                return getResources().getString(R.string.weekday_friday);
-            default:
-                return null;
-        }
-    }
-
     private void removeClickables() {
         backPressed = false;
+        drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
         barnameHaftegiVaredKonim.setClickable(false);
         barnameHaftegiVaredKonim.setLongClickable(false);
         ezafeKardaneTaklifeRooz.setClickable(false);
-//        btnNotif.setClickable(false);
-        btnInfo.setClickable(false);
-//        btnCalendar.setClickable(false);
         toolbar.setClickable(false);
         drawerToggler.setClickable(false);
         kadr_ha_dg_container.setClickable(false);
         kadr_miangin.setClickable(false);
         taklifVaredKonidContainer.setClickable(false);
         motaleEmroozMoreAdd.setClickable(false);
-        if (takalifEmroozContainer != null)
-            for (int i=0;i < takalifEmroozContainer.getChildCount();i++)
-                taklifVaredKonidContainer.getChildAt(i).setClickable(false);
-        if (takalifFardaContainer != null)
-            for (int i=0;i < takalifFardaContainer.getChildCount();i++)
-                takalifFardaContainer.getChildAt(i).setClickable(false);
-        if (takalifJamondeContainer != null)
-            for (int i=0;i < takalifJamondeContainer.getChildCount();i++)
-                takalifJamondeContainer.getChildAt(i).setClickable(false);
+
+        if (takalifFardaAdapter!=null){
+            takalifFardaAdapter.setEnabled(false);
+            takalifFardaAdapter.areAllItemsEnabled();
+        }
+        if (takalifEmroozAdapter!=null){
+            takalifEmroozAdapter.setEnabled(false);
+            takalifEmroozAdapter.areAllItemsEnabled();
+        }
+        if (takalifJamondeAdapter!=null){
+            takalifJamondeAdapter.setEnabled(false);
+            takalifJamondeAdapter.areAllItemsEnabled();
+        }
+//        takalifJamondeContainer.setFocusable(false);
+//        takalifJamondeContainer.setFocusableInTouchMode(false);
+//        takalifEmroozContainer.setFocusable(false);
+//        takalifEmroozContainer.setFocusableInTouchMode(false);
+//        takalifFardaContainer.setFocusable(false);
+//        takalifFardaContainer.setFocusableInTouchMode(false);
     }
 
     private void initDrawer() {
@@ -664,7 +638,7 @@ public class MainActivity extends AppCompatActivity
         fragmentContainer = (LinearLayout) findViewById(R.id.fragment_container);
 //        notifCount = (TextView) findViewById(R.id.notif_count);
 //        btnNotif = (ImageView) findViewById(R.id.btn_notif);
-        btnInfo = (ImageView) findViewById(R.id.btn_info);
+//        btnInfo = (ImageView) findViewById(R.id.btn_info);
         motaleEmroozMoreAdd = (ImageView) findViewById(R.id.main_page_motalee_emroz_plus_more);
 //        btnCalendar = (ImageView) findViewById(R.id.ic_calendar);
         calendarToday = (TextView) findViewById(R.id.main_page_to_day);
@@ -760,12 +734,10 @@ public class MainActivity extends AppCompatActivity
                 AlertHelper.makeToast(this, getResources().getString(R.string.txt_thisforschools));
                 break;
             case R.id.main_page_barname_haftegi_vared_konid: {
-                if (!preferenceManager.isEnteredSchedule()) {
-                    initBackgroundFeatures();
-                    removeClickables();
-                    setLayoutParams(fragmentContainer);
-                    openFragment(new VaredKardaneBarnameHaftegi());
-                }
+                initBackgroundFeatures();
+                removeClickables();
+                setLayoutParams(fragmentContainer);
+                openFragment(new VaredKardaneBarnameHaftegi());
                 break;
             }
             case R.id.main_page_takalif_vared_konid_container:
@@ -787,10 +759,10 @@ public class MainActivity extends AppCompatActivity
                 }
                 break;
             }
-            case R.id.btn_info:
-                Intent intent = new Intent(MainActivity.this, Intro.class);
-                startActivity(intent);
-                break;
+//            case R.id.btn_info:
+//                Intent intent = new Intent(MainActivity.this, Intro.class);
+//                startActivity(intent);
+//                break;
 //                start
 //            case R.id.btn_notif: {
 //                if (NotificationHelper.getNotifsAmount() > 0) {
@@ -963,56 +935,21 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void setClickables() {
         backPressed = false;
+        drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
         barnameHaftegiVaredKonim.setClickable(true);
         barnameHaftegiVaredKonim.setLongClickable(true);
         ezafeKardaneTaklifeRooz.setClickable(true);
-//        btnNotif.setClickable(true);
         drawerToggler.setClickable(true);
         taklifVaredKonidContainer.setClickable(true);
         motaleEmroozMoreAdd.setClickable(true);
-        if (takalifEmroozContainer != null)
-            for (int i=0;i < takalifEmroozContainer.getChildCount();i++)
-                taklifVaredKonidContainer.getChildAt(i).setClickable(true);
-        if (takalifFardaContainer != null)
-            for (int i=0;i < takalifFardaContainer.getChildCount();i++)
-                takalifFardaContainer.getChildAt(i).setClickable(true);
-        if (takalifJamondeContainer != null)
-            for (int i=0;i < takalifJamondeContainer.getChildCount();i++)
-                takalifJamondeContainer.getChildAt(i).setClickable(true);
-        btnInfo.setClickable(true);
-//        btnCalendar.setClickable(true);
+
+        takalifJamondeContainer.setEnabled(true);
+        takalifEmroozContainer.setEnabled(true);
+        takalifFardaContainer.setEnabled(true);
+
         toolbar.setClickable(true);
         kadr_ha_dg_container.setClickable(true);
         kadr_miangin.setClickable(true);
-
-        darkOppacity.setBackgroundColor(Color.parseColor("#00000000"));
-        scrollMain.setScrollingEnabled(true);
-        updateNotifs();
-    }
-
-    public void setClickabless(){
-        backPressed = false;
-        barnameHaftegiVaredKonim.setClickable(true);
-        barnameHaftegiVaredKonim.setLongClickable(true);
-        ezafeKardaneTaklifeRooz.setClickable(true);
-//        btnNotif.setClickable(true);
-        drawerToggler.setClickable(true);
-        taklifVaredKonidContainer.setClickable(true);
-        motaleEmroozMoreAdd.setClickable(true);
-        kadr_ha_dg_container.setClickable(true);
-        kadr_miangin.setClickable(true);
-        if (takalifEmroozContainer != null)
-            for (int i=0;i < takalifEmroozContainer.getChildCount();i++)
-                taklifVaredKonidContainer.getChildAt(i).setClickable(true);
-        if (takalifFardaContainer != null)
-            for (int i=0;i < takalifFardaContainer.getChildCount();i++)
-                takalifFardaContainer.getChildAt(i).setClickable(true);
-        if (takalifJamondeContainer != null)
-            for (int i=0;i < takalifJamondeContainer.getChildCount();i++)
-                takalifJamondeContainer.getChildAt(i).setClickable(true);
-        btnInfo.setClickable(true);
-//        btnCalendar.setClickable(true);
-        toolbar.setClickable(true);
 
         darkOppacity.setBackgroundColor(Color.parseColor("#00000000"));
         scrollMain.setScrollingEnabled(true);
@@ -1044,7 +981,6 @@ public class MainActivity extends AppCompatActivity
         drawerGrade.setText("  مقطع " + preferenceManager.getStudentGrade());
 
         taklifManAfter.setVisibility(View.VISIBLE);
-        Toast.makeText(this, ""+date.getTomorrow().getDayOfWeekString(), Toast.LENGTH_SHORT).show();
         barnameHaftegiVaredKonim.setText(" برنامه فردا" + "\n" + lessonDatabase.getScheduleOf(date.getTomorrow().getDayOfWeekString()));
         barnameHaftegiVaredKonim.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 12);
         barnameHaftegiVaredKonim.setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
@@ -1125,10 +1061,11 @@ public class MainActivity extends AppCompatActivity
             case R.id.drawer_item_group_tools_description:
                 AlertDialog builder = new AlertDialog.Builder(this)
                         .setMessage(
-                                "نجاری بدون اره و گیره و سمباده و ... مگه میشه ؟!"+"\n"+
-                                "شک نکن درس خوندن هم ابزار لازم داره."+"\n"+
-                                "ابزارهایی که کارتو راحت کنن و سریع تر به پیشرفت برسوننت."
+                                "نجاری بدون اره و گیره و سمباده و ... مگه میشه ؟!" + "\n" +
+                                        "شک نکن درس خوندن هم ابزار لازم داره." + "\n" +
+                                        "ابزارهایی که کارتو راحت کنن و سریع تر به پیشرفت برسوننت."
                         ).show();
+                builder.getWindow().setBackgroundDrawableResource(R.drawable.rounded_rectangle_whitesmoke);
                 TextView textView = (TextView) builder.findViewById(android.R.id.message);
                 textView.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/IRAN-SANS.TTF"));
                 textView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 13f);
@@ -1216,21 +1153,6 @@ public class MainActivity extends AppCompatActivity
     public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
         backPressed = false;
         this.timePicked = (int) (TimeUnit.HOURS.toMinutes(hourOfDay) + minute);
-    }
-
-    @Override
-    public boolean onLongClick(View v) {
-        switch (v.getId()) {
-            case R.id.main_page_barname_haftegi_vared_konid:
-                if (preferenceManager.isEnteredSchedule()) {
-                    initBackgroundFeatures();
-                    removeClickables();
-                    setLayoutParams(fragmentContainer);
-                    openFragment(new VaredKardaneBarnameHaftegi());
-                }
-                break;
-        }
-        return false;
     }
 
     @Override

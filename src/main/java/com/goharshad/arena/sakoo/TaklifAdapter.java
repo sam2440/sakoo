@@ -30,6 +30,7 @@ public class TaklifAdapter extends ArrayAdapter implements View.OnClickListener 
     private int mPosition = 0;
     private static TaklifStatus status = null;
     private static String lesson, taklif;
+    private boolean setEnabled=true;
 
     public TaklifAdapter(@NonNull Context context, @LayoutRes int resource, @NonNull List objects) {
         super(context, resource, objects);
@@ -194,5 +195,19 @@ public class TaklifAdapter extends ArrayAdapter implements View.OnClickListener 
 //                    break;
 //            }
         }
+    }
+
+    public void setEnabled(boolean setEnabled) {
+        this.setEnabled = setEnabled;
+    }
+
+    @Override
+    public boolean isEnabled(int position) {
+        return setEnabled;
+    }
+
+    @Override
+    public boolean areAllItemsEnabled() {
+        return setEnabled;
     }
 }

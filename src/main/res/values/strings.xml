@@ -355,6 +355,12 @@
         میتونی از قسمت برنامه هفتگی شروع کنی و مقطع و برنامتو یه بار برای همیشه وارد کنی
     </string>
 
+    <string name="notif_gozaresh_azmoon_remove">
+        میتونی با طولانی نگه داشتن روی هر گزارش و انتخاب "بله" آن را حذف کنی
+    </string>
+
+    <string name="activity_gozaresh_azmoon_remove_alart">آزمون پاک شود؟</string>
+
     <!--spinner_maghtae tahsili-->
 
     <string name="grade_7">هفتم</string>

@@ -16,8 +16,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/drawer_toggler"
@@ -33,25 +32,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_centerVertical="true"
-                android:layout_toLeftOf="@id/drawer_toggler"
                 android:scaleType="centerInside"
+                android:padding="2dp"
                 android:adjustViewBounds="true"
-                android:layout_marginRight="12dp"
+                android:layout_alignParentLeft="true"
                 android:src="@drawable/ic_logo_main" />
 
 
-            <ImageView
-                android:id="@+id/btn_info"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="3dp"
-                android:adjustViewBounds="true"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:scaleType="centerInside"
-                android:src="@drawable/information" />
+            <!--<ImageView-->
+                <!--android:id="@+id/btn_info"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="3dp"-->
+                <!--android:adjustViewBounds="true"-->
+                <!--android:paddingBottom="10dp"-->
+                <!--android:paddingTop="10dp"-->
+                <!--android:scaleType="centerInside"-->
+                <!--android:src="@drawable/information" />-->
 
         </RelativeLayout>
 

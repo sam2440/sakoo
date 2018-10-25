@@ -17,7 +17,6 @@ import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -37,9 +36,6 @@ public class SlideSecond extends Fragment implements ViewTreeObserver.OnGlobalLa
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
-        if (view!=null && view.getContext()!=null){
-            Toast.makeText(view.getContext(), "called", Toast.LENGTH_SHORT).show();
-        }
         if (isVisibleToUser && view != null) {
             scaleView(R.id.slide_2_circle_1, 0, 1, 600, 0);
             scaleView(R.id.slide_2_circle_2, 0, 1, 400, 200);
@@ -99,7 +95,6 @@ public class SlideSecond extends Fragment implements ViewTreeObserver.OnGlobalLa
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         this.view = view;
         this.context = view.getContext();
-        Toast.makeText(context, "called created", Toast.LENGTH_SHORT).show();
         RelativeLayout layout = (RelativeLayout) view.findViewById(R.id.first_launch_space_between);
         layout.getLayoutParams().height = (int) (.109 * DimenHelper.getDeviceHeight(((Activity) context)));
 
@@ -110,20 +105,6 @@ public class SlideSecond extends Fragment implements ViewTreeObserver.OnGlobalLa
         title.setTypeface(typeface);
         description.setTypeface(typeface);
         description.setText("برای هر روزتون هدف داشته باشید" + "\n" + "و بهش برسید" + "\n" + "یه هدف منطفی");
-
-//        final ImageView imageView= (ImageView) view.findViewById(R.id.slide_2_pencil);
-//        imageView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-//            @Override
-//            public void onGlobalLayout() {
-//                imageView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-//                double width=0;
-//                Toast.makeText(getContext(), "w : "+width, Toast.LENGTH_SHORT).show();
-//                double deviceR=DimenHelper.getDeviceWidth(getActivity())/2;
-//                Toast.makeText(getContext(), "rw : "+deviceR, Toast.LENGTH_SHORT).show();
-//                ((RelativeLayout.LayoutParams) imageView.getLayoutParams()).rightMargin= (int)(deviceR-width);
-//                Toast.makeText(getContext(), "mr : "+((RelativeLayout.LayoutParams) imageView.getLayoutParams()).rightMargin, Toast.LENGTH_SHORT).show();
-//            }
-//        });
     }
 
     private void scaleView(@IdRes int id, float from, float to, int duration, int delay) {

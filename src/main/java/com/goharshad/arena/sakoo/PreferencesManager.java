@@ -13,6 +13,8 @@ public class PreferencesManager {
     private static final String IS_CHECKED_ENTEKHAB_DARS_DIALOG= "checkedentekhabedarsdialog";
     private static final String IS_SEEN_PURPOSING_DIALOG= "isseenpurposingdialog";
     private static final String IS_ENTERED_SCHEDULE = "isenteredschedule";
+    private static final String REMOVE_GOZARESH_AZMOON = "removegozareshazmoon";
+    private static final String GOZARESH_AZMOON_IS_CHECKED_INFO_DIALOG= "gozareshazmooncheckedinfodialog";
     private static final String IS_FILLED_PURPOSES= "isfilledpurposes";
     private static final String CURRENT_STUDY_TIME= "currentstudytime";
     private static final String STUDENT_GRADE= "studentgrade";
@@ -80,6 +82,15 @@ public class PreferencesManager {
 
     public boolean isCheckedInfoDialog() {
         return preferences.getBoolean(IS_CHECKED_INFO_DIALOG,false);
+    }
+
+    public void setGozareshAzmoonIsCheckedInfoDialog(boolean isCheckedInfoDialog) {
+        editor.putBoolean(GOZARESH_AZMOON_IS_CHECKED_INFO_DIALOG, isCheckedInfoDialog);
+        editor.apply();
+    }
+
+    public boolean gozareshAzmoonIsCheckedInfoDialog() {
+        return preferences.getBoolean(GOZARESH_AZMOON_IS_CHECKED_INFO_DIALOG,false);
     }
 
     public void setIsCheckedEntekhabDarsialog(boolean isCheckedEntekhabDarsialog) {

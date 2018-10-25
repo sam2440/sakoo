@@ -1,11 +1,13 @@
 package com.goharshad.arena.sakoo;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -36,7 +38,6 @@ public class CalcPercentage extends AppCompatActivity implements View.OnClickLis
             ((Button) v).setTypeface(typeface);
         else
             ((TextView) v).setTypeface(typeface);
-
     }
 
     private void findViews(){
@@ -74,6 +75,7 @@ public class CalcPercentage extends AppCompatActivity implements View.OnClickLis
                     int wrongInt=Integer.parseInt(wrong.getText().toString());
                     int totalInt=Integer.parseInt(total.getText().toString());
                     if (rightInt<0 || wrongInt<0 || totalInt<=0 || (rightInt+wrongInt)>totalInt){
+                        hideKeyboard(this);
                         AlertHelper.makeDialog(this,R.string.txt_wrongdatacalcpercentage);
                     }else {
                         Intent intent = new Intent(CalcPercentage.this,ShowPercentage.class);
@@ -87,5 +89,16 @@ public class CalcPercentage extends AppCompatActivity implements View.OnClickLis
             case R.id.calc_percent_backimage:
                 finish();
         }
+    }
+
+    public static void hideKeyboard(Activity activity) {
+        InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        //Find the currently focused view, so we can grab the correct window token from it.
+        View view = activity.getCurrentFocus();
+        //If no view currently has focus, create a new one, just so we can grab a window token from it
+        if (view == null) {
+            view = new View(activity);
+        }
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 }

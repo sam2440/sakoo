@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@drawable/orange"
+                android:background="@drawable/orange_rounded_top"
                 android:gravity="center_vertical"
                 android:text="محمد حسین ناجانی"
                 android:textAlignment="center"
@@ -39,7 +39,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@drawable/blue"
+                android:background="@drawable/blue_rounded_bottom"
                 android:gravity="center_vertical"
                 android:textAlignment="center"
                 android:textColor="#FFF" />

@@ -232,10 +232,4 @@ public class ShowExamResult extends AppCompatActivity {
         sb=sb.reverse();
         return sb;
     }
-
-    @Override
-    public void onBackPressed() {
-        finish();
-        startActivity(new Intent(this,AnswerSheet.class));
-    }
 }

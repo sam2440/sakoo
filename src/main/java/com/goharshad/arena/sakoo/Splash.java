@@ -17,42 +17,10 @@ public class Splash extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        PreferencesManager manager = new PreferencesManager(this);
+        manager.setAppInForground(true);
         Intent intent = new Intent(this, FirstLaunchActivity.class);
         startActivity(intent);
         finish();
-
-        //        setContentView(R.layout.activity_splash);
-//        getSupportActionBar().hide();
-//        handler.postDelayed(runnable,3550);
-//        PreferencesManager manager=new PreferencesManager(this);
-//        manager.setAppInForground(true);
     }
-
-//    private static class MyHandler extends Handler {
-//
-//        private final WeakReference<Splash> mRefrence;
-//
-//        private MyHandler(Splash splash) {
-//            this.mRefrence = new WeakReference<Splash>(splash);
-//        }
-//    }
-//
-//    private static class MyRunnable implements Runnable{
-//
-//        private Activity activity;
-//
-//        public MyRunnable(Activity activity) {
-//            this.activity = activity;
-//        }
-//
-//        @Override
-//        public void run() {
-//
-//        }
-//    }
-//
-//    @Override
-//    public void onBackPressed() {
-//        android.os.Process.killProcess(android.os.Process.myPid());
-//    }
 }
