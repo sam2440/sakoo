@@ -134,8 +134,6 @@ public class ShowPercentage extends AppCompatActivity implements View.OnClickLis
         pieChart.setHoleRadius(0);
         pieChart.setTransparentCircleAlpha(0);
         pieChart.setData(pieData);
-        pieChart.setClickable(false);
-        pieChart.setRotationEnabled(false);
         pieChart.invalidate();
     }
 

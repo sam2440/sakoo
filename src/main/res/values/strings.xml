@@ -77,6 +77,9 @@
         ابزارهایی که کارتو راحت کنن و سریع تر به پیشرفت برسوننت.
     </string>
 
+    <string name="activity_lightner_empty">هنوز برگه ای برای مرور در این بخش ندارید.</string>
+    <string name="activity_lightner_dont_review">زمان مرور نرسیده است.</string>
+
     <!--splash-->
     <string name="connect_title">وصل شد</string>
     <string name="disconnect_title">وصل نشد</string>
@@ -88,7 +91,7 @@
     <string name="weekday_saturday">شنبه</string>
     <string name="weekday_sunday">یکشنبه</string>
     <string name="weekday_monday">دوشنبه</string>
-    <string name="weekday_tuesday">سهشنبه</string>
+    <string name="weekday_tuesday">سه شنبه</string>
     <string name="weekday_wednesday">چهارشنبه</string>
     <string name="weekday_thursday">پنجشنبه</string>
     <string name="weekday_friday">جمعه</string>

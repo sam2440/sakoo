@@ -3,26 +3,18 @@ package com.goharshad.arena.sakoo;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Typeface;
-import android.os.Parcelable;
-import android.support.annotation.IdRes;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import ir.huri.jcal.JalaliCalendar;
-
 
 public class Lightner extends AppCompatActivity implements View.OnClickListener{
 
@@ -134,7 +126,10 @@ public class Lightner extends AppCompatActivity implements View.OnClickListener{
                     startActivity(intent);
                 }
                 else{
-                    AlertHelper.makeToast(this, "هنوز برگه ای برای مرور در این بخش ندارید.");
+                    if(totalGroupWords[0]==0)
+                        AlertHelper.makeToast(this, getString(R.string.activity_lightner_empty));
+                    else
+                        AlertHelper.makeToast(this, getString(R.string.activity_lightner_dont_review));
                 }
                 break;
             case R.id.laytner_2day:
@@ -143,7 +138,10 @@ public class Lightner extends AppCompatActivity implements View.OnClickListener{
                     startActivity(intent);
                 }
                 else{
-                    AlertHelper.makeToast(this, "هنوز برگه ای برای مرور در این بخش ندارید.");
+                    if(totalGroupWords[1]==0)
+                        AlertHelper.makeToast(this, getString(R.string.activity_lightner_empty));
+                    else
+                        AlertHelper.makeToast(this, getString(R.string.activity_lightner_dont_review));
                 }
                 break;
             case R.id.laytner_4day:
@@ -152,7 +150,10 @@ public class Lightner extends AppCompatActivity implements View.OnClickListener{
                     startActivity(intent);
                 }
                 else{
-                    AlertHelper.makeToast(this, "هنوز برگه ای برای مرور در این بخش ندارید.");
+                    if(totalGroupWords[2]==0)
+                        AlertHelper.makeToast(this, getString(R.string.activity_lightner_empty));
+                    else
+                        AlertHelper.makeToast(this, getString(R.string.activity_lightner_dont_review));
                 }
                 break;
             case R.id.laytner_8day:
@@ -161,7 +162,10 @@ public class Lightner extends AppCompatActivity implements View.OnClickListener{
                     startActivity(intent);
                 }
                 else{
-                    AlertHelper.makeToast(this, "هنوز برگه ای برای مرور در این بخش ندارید.");
+                    if(totalGroupWords[3]==0)
+                        AlertHelper.makeToast(this, getString(R.string.activity_lightner_empty));
+                    else
+                        AlertHelper.makeToast(this, getString(R.string.activity_lightner_dont_review));
                 }
                 break;
             case R.id.laytner_16day:
@@ -170,7 +174,10 @@ public class Lightner extends AppCompatActivity implements View.OnClickListener{
                     startActivity(intent);
                 }
                 else{
-                    AlertHelper.makeToast(this, "هنوز برگه ای برای مرور در این بخش ندارید.");
+                    if(totalGroupWords[4]==0)
+                        AlertHelper.makeToast(this, getString(R.string.activity_lightner_empty));
+                    else
+                        AlertHelper.makeToast(this, getString(R.string.activity_lightner_dont_review));
                 }
                 break;
             case R.id.laytner_baygani:
@@ -179,7 +186,7 @@ public class Lightner extends AppCompatActivity implements View.OnClickListener{
                     startActivity(intent);
                 }
                 else{
-                    AlertHelper.makeToast(this, "هنوز برگه ای برای مرور در این بخش ندارید.");
+                    AlertHelper.makeToast(this, getString(R.string.activity_lightner_empty));
                 }
                 break;
             case R.id.laytner_backimage:
@@ -341,7 +348,7 @@ public class Lightner extends AppCompatActivity implements View.OnClickListener{
         counterBarge4.setLayoutParams(params4);
         counterBarge5.setLayoutParams(params5);
     }
-    
+
     private void setLocksVisibility(){
         if(totalGroupWords[0]!=0)
             lock1.setVisibility(View.INVISIBLE);

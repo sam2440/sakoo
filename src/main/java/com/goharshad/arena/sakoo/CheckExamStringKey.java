@@ -20,6 +20,7 @@ public class CheckExamStringKey extends AppCompatActivity implements View.OnClic
 
     private EditText key;
     private Button check;
+    private ImageButton back;
     private String answers,result,onvan;
     private int totalQ;
     private AzmoonDataBase azmoonDataBase;
@@ -35,6 +36,7 @@ public class CheckExamStringKey extends AppCompatActivity implements View.OnClic
 
         check.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/IRAN-SANS.TTF"));
         check.setOnClickListener(this);
+        back.setOnClickListener(this);
 
         setFont(R.id.ans_checkstr_txt_1);
         setFont(R.id.ans_checkstr_txt_2);
@@ -56,16 +58,17 @@ public class CheckExamStringKey extends AppCompatActivity implements View.OnClic
     private void initToolbar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.anscheckstrtoolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().setDisplayShowHomeEnabled(false);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back_black_37dp);
+//        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back_black_37dp);
 
         TextView toolbar_txt = (TextView) toolbar.findViewById(R.id.anscheckstrtitle);
         toolbar_txt.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/IRAN-SANS.TTF"));
     }
 
     private void fidViews(){
+        back= (ImageButton) findViewById(R.id.checkexamwaystr_back);
         key= (EditText) findViewById(R.id.check_exam_string_key_et);
         check= (Button) findViewById(R.id.check_exam_string_key_btn);
     }
@@ -99,10 +102,12 @@ public class CheckExamStringKey extends AppCompatActivity implements View.OnClic
                     return;
                 }
             }
+            new PreferencesManager(this).setExitToAnswersheet(true);
             Intent intent=new Intent(CheckExamStringKey.this,ShowExamResult.class);
             addToGozareshDataBase();
             intent.putExtra("option","result");
             startActivity(intent);
+            finish();
         }
     }
 
@@ -111,6 +116,9 @@ public class CheckExamStringKey extends AppCompatActivity implements View.OnClic
         switch (v.getId()){
             case R.id.check_exam_string_key_btn:
                 checkKey();
+                break;
+            case R.id.checkexamwaystr_back :
+                finish();
                 break;
         }
     }

@@ -92,12 +92,12 @@ public class TaklifDatabase extends SQLiteOpenHelper {
 
     public boolean update1(){
         LessonDatabase lessonDatabase=new LessonDatabase(context);
-        int dayAfter=new JalaliCalendar().getTomorrow().getDayOfWeek();
+        JalaliCalendar jalaliCalendar=new JalaliCalendar();
         SQLiteDatabase database = this.getWritableDatabase();
         Cursor cursor = database.query(true, TABLE_NAME,null,COL_STATUS+"=?",new String[]{TaklifStatus.DELAYED.toString()}
                 , null, null, null, null);
         while (cursor.moveToNext()){
-            if (lessonDatabase.exists(getDayOfWeek(dayAfter),cursor.getString(1))){
+            if (lessonDatabase.exists(jalaliCalendar.getTomorrow().getDayOfWeekString(),cursor.getString(1))){
                 update(cursor.getString(1),cursor.getString(2),TaklifStatus.DELAYED,TaklifStatus.TOMORROWED);
             }
         }
@@ -140,17 +140,6 @@ public class TaklifDatabase extends SQLiteOpenHelper {
                 , new String[]{lesson,taklif,from.toString()}) != -1;
     }
 
-    public List<String> lessonsOf(String weekDay, String date) {
-        List<String> strings = new ArrayList<>();
-        SQLiteDatabase database = this.getWritableDatabase();
-        Cursor cursor = database.query(TABLE_NAME, new String[]{COL_LESSON}, COL_WEEK_DAY + " = ? AND " + COL_DATE + "= ?"
-                , new String[]{weekDay, date == null ? today : date}, null, null, null);
-        while (cursor.moveToNext())
-            strings.add(cursor.getString(0));
-
-        return strings;
-    }
-
     public String taklifOf(String lesson) {
         SQLiteDatabase database = this.getWritableDatabase();
         Cursor cursor = database.query(true, TABLE_NAME, new String[]{COL_TAKLIF}
@@ -173,8 +162,8 @@ public class TaklifDatabase extends SQLiteOpenHelper {
         List<DailyReportObject> list=new ArrayList<>();
         SQLiteDatabase database=this.getWritableDatabase();
         Cursor cursor=database.query(true,TABLE_NAME,new String[]{COL_LESSON,COL_TAKLIF,COL_STUDY_TIME},
-                COL_DATE+"=?",new String[]{today},null,null,null,null);
-        if (cursor.moveToNext()){
+                COL_DATE+"=? AND "+COL_STUDY_TIME+" != 0",new String[]{today},null,null,null,null);
+        while (cursor.moveToNext()){
             list.add(new DailyReportObject(cursor.getString(0),cursor.getString(1),cursor.getInt(2)));
         }
         return list;
@@ -198,32 +187,6 @@ public class TaklifDatabase extends SQLiteOpenHelper {
             takalif.put(cursor.getString(0), cursor.getString(1));
         }
         return takalif;
-    }
-
-    private String getDayOfWeek(int weekDay) {
-        switch (weekDay) {
-            case 1:
-                return context.getResources().getString(R.string.weekday_saturday);
-            case 2:
-                return context.getResources().getString(R.string.weekday_sunday);
-            case 3:
-                return context.getResources().getString(R.string.weekday_monday);
-            case 4:
-                return context.getResources().getString(R.string.weekday_tuesday);
-            case 5:
-                return context.getResources().getString(R.string.weekday_wednesday);
-            case 6:
-                return context.getResources().getString(R.string.weekday_thursday);
-            case 7:
-                return context.getResources().getString(R.string.weekday_friday);
-            default:
-                return null;
-        }
-    }
-
-    public boolean deleteAll() {
-        SQLiteDatabase database = this.getWritableDatabase();
-        return database.delete(TABLE_NAME, "1", null) != -1;
     }
 
     public String map() {

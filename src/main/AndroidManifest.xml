@@ -86,7 +86,6 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".CheckExamStringKey"
-            android:parentActivityName=".CheckExamWays"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity

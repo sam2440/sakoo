@@ -262,6 +262,7 @@ public class GozareshAzmoon extends AppCompatActivity implements View.OnClickLis
         dialog.setOnShowListener(new DialogInterface.OnShowListener() {
             @Override
             public void onShow(DialogInterface di) {
+                dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.RED);
                 dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTypeface(Typeface.createFromAsset(getAssets(), "fonts/IRAN-SANS.TTF"));
                 dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTypeface(Typeface.createFromAsset(getAssets(), "fonts/IRAN-SANS.TTF"));
 

@@ -28,6 +28,7 @@ public class PreferencesManager {
     public static final String SAVED_WEEKLY_DATE="saveddateweekly";
     public static final String SAVED_MONTHLY_DATE="saveddatemonthly";
     private static final String ENTERED_LESSONS_SET="enteredlessonsset";
+    private static final String EXIT_TO_ANSWERSHEET="exittoanswersheet";
     private SharedPreferences preferences;
     private SharedPreferences.Editor editor;
     private Context context;
@@ -211,5 +212,15 @@ public class PreferencesManager {
     public Set<String> getEnteredLessons(){
         return preferences.getStringSet(ENTERED_LESSONS_SET,null);
     }
+
+    public void setExitToAnswersheet(boolean b){
+        editor.putBoolean(EXIT_TO_ANSWERSHEET,b);
+        editor.apply();
+    }
+
+    public boolean getExitToAnswersheet(){
+        return preferences.getBoolean(EXIT_TO_ANSWERSHEET,false);
+    }
+
 
 }

@@ -39,6 +39,7 @@ public class StartExam extends AppCompatActivity implements View.OnClickListener
     private AzmoonDataBase azmoonDataBase;
     private int rightNum=0,wrongNum=0;
     private CountDownTimer timer;
+    private ImageButton back;
     private boolean check=true,finished=false;
 
     @Override
@@ -47,6 +48,7 @@ public class StartExam extends AppCompatActivity implements View.OnClickListener
         setContentView(R.layout.activity_start_exam);
         initToolbar();
         findViews();
+        back.setOnClickListener(this);
         tamoom_shod.setOnClickListener(this);
         tamoom_shod.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/IRAN-SANS.TTF"));
         getExtras();
@@ -92,10 +94,9 @@ public class StartExam extends AppCompatActivity implements View.OnClickListener
     private void initToolbar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.ansstartexamtoolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().setDisplayShowHomeEnabled(false);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back_black_37dp);
     }
 
     private void findViews(){
@@ -104,6 +105,7 @@ public class StartExam extends AppCompatActivity implements View.OnClickListener
         tamoom_shod= (Button) findViewById(R.id.start_test_tamom_shod);
         scrollView= (ScrollView) findViewById(R.id.start_test_questions_scroll);
         linearLayout= (LinearLayout) findViewById(R.id.start_test_questions_linear);
+        back= (ImageButton) findViewById(R.id.startexam_back);
     }
 
     @Override
@@ -132,6 +134,9 @@ public class StartExam extends AppCompatActivity implements View.OnClickListener
                         finish();
                     }
                 }
+                break;
+            case R.id.startexam_back :
+                confirmExit();
                 break;
         }
     }
@@ -405,6 +410,10 @@ public class StartExam extends AppCompatActivity implements View.OnClickListener
 
     @Override
     public void onBackPressed() {
+       confirmExit();
+    }
+
+    public void confirmExit(){
         final AlertDialog dialog=new AlertDialog.Builder(this)
                 .setMessage("مطمئن هستی نمیخوای ادامه بدی ؟")
                 .setPositiveButton("آره", new DialogInterface.OnClickListener() {
@@ -419,6 +428,14 @@ public class StartExam extends AppCompatActivity implements View.OnClickListener
                         dialogInterface.dismiss();
                     }
                 }).create();
+        dialog.setOnShowListener(new DialogInterface.OnShowListener() {
+            @Override
+            public void onShow(DialogInterface di) {
+                dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.RED);
+                dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTypeface(Typeface.createFromAsset(getAssets(), "fonts/IRAN-SANS.TTF"));
+                dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTypeface(Typeface.createFromAsset(getAssets(), "fonts/IRAN-SANS.TTF"));
+            }
+        });
         dialog.show();
 
         Typeface typeface=Typeface.createFromAsset(getAssets(), "fonts/IRAN-SANS.TTF");
@@ -426,8 +443,6 @@ public class StartExam extends AppCompatActivity implements View.OnClickListener
         textView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 12f);
         textView.setTypeface(typeface);
         textView.setTextColor(ContextCompat.getColor(this, R.color.colorDark_1));
-        ((Button) dialog.findViewById(android.R.id.button1)).setTypeface(typeface);
-        ((Button) dialog.findViewById(android.R.id.button2)).setTypeface(typeface);
         dialog.getWindow().setBackgroundDrawableResource(R.drawable.rounded_rectangle_white1);
     }
 }

@@ -84,7 +84,7 @@ public class PurposingDatabase extends SQLiteOpenHelper {
 
     public int getSuggestedOf(String weekDay){
         SQLiteDatabase database=this.getWritableDatabase();
-        Cursor cursor=database.query(true,TABLE_NAME,new String[]{COL_SUGGESTED},COL_WEEK_DAY+"=?"
+        Cursor cursor=database.query(true,TABLE_NAME,new String[]{COL_AVAILABLE},COL_WEEK_DAY+"=?"
                 ,new String[]{weekDay},null,null,null,null);
         if (cursor.moveToNext())
             return cursor.getInt(0);

@@ -7,7 +7,6 @@ import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
-import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -18,23 +17,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import android.content.Intent;
-import android.database.Cursor;
-import android.graphics.Color;
-import android.os.Parcelable;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutCompat;
 import android.util.Log;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
+
+import ir.huri.jcal.JalaliCalendar;
 
 public class LightnerWords extends AppCompatActivity implements View.OnClickListener{
 
@@ -48,14 +34,20 @@ public class LightnerWords extends AppCompatActivity implements View.OnClickList
     private Cursor cursor;
     private int totalWordsNum=0;
     private LinearLayout.LayoutParams params;
+    private int cur_day,cur_month,cur_year,day,month,year,next_day,next_month,next_year,group;
+    private String date;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lightner_words);
-        initToolbar();
         findViews();
-        lightnerDatabase=new LightnerDatabase(LightnerWords.this,"laytner",null,1);;
+        lightnerDatabase=new LightnerDatabase(LightnerWords.this,"laytner",null,1);
+        date= new JalaliCalendar().toString();
+        changeStringDateToInt();
+        cur_day=day;
+        cur_month=month;
+        cur_year=year;
         setLayout();
         cursor=lightnerDatabase.view(findCurrentTable());
         setCounters();
@@ -64,44 +56,14 @@ public class LightnerWords extends AppCompatActivity implements View.OnClickList
         word.setText(_word);
         remember.setClickable(false);
         dontRemember.setClickable(false);
-
-
-        setFont(R.id.lay_word_laytitle_word);
-        setFont(R.id.lay_word_laytitle_word_group);
-        setFont(R.id.laytner_word);
-        setFont(R.id.laytner_meaning);
-        setFont(R.id.lay_word_laytitle_word);
-        setFont(R.id.laytner_dont_remember);
-        setFont(R.id.laytner_hazf_baygani_btn);
-        setFont(R.id.laytner_remember);
-    }
-
-    private void initToolbar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.laytner_word_toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back_black_37dp);
-    }
-
-
-    private void setFont(@IdRes int id) {
-        View textView = findViewById(id);
-        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/IRAN-SANS.TTF");
-        if (id==R.id.laytner_dont_remember || id==R.id.laytner_remember || id==R.id.laytner_hazf_baygani_btn)
-            ((Button) textView).setTypeface(typeface);
-        else
-            ((TextView) textView).setTypeface(typeface);
-
-
     }
 
     private void setLayout(){
         table=getIntent().getExtras().getString("table");
+        group = (Integer.parseInt(table));
 //        lightnerDatabase=(lightnerDatabase) getIntent().getSerializableExtra("lightnerDatabase");
         makeWordGroupName((Integer.parseInt(table)));
-        if(table.equals("6")){
+        if(group==6){
             remember.setVisibility(View.INVISIBLE);
             dontRemember.setVisibility(View.INVISIBLE);
             hazf.setVisibility(View.VISIBLE);
@@ -146,6 +108,10 @@ public class LightnerWords extends AppCompatActivity implements View.OnClickList
                 lightnerDatabase.remove(findCurrentTable(),_word,_meaning);
                 break;
             case R.id.laytner_dont_remember:
+//                Log.d("TAG1234",cursor.getString(3));
+                if(lightnerDatabase.update(findCurrentTable(),_word,_meaning))
+//                    Toast.makeText(this, cursor.getString(1)+cursor.getString(2)+cursor.getString(3), Toast.LENGTH_SHORT).show();
+//                  Log.d("TAG123",cursor.getString(1)+cursor.getString(2)+cursor.getString(3));
                 nextWord();
                 break;
             case R.id.laytner_hazf_baygani_btn:
@@ -213,8 +179,15 @@ public class LightnerWords extends AppCompatActivity implements View.OnClickList
 
     private void makeWordMeaning(){
         if(cursor.moveToNext()){
-            _word=cursor.getString(1);
-            _meaning=cursor.getString(2);
+            date=cursor.getString(3);
+            if ((checkReviewDate(group))){
+                _word=cursor.getString(1);
+                _meaning=cursor.getString(2);
+            }
+            if(group==6){
+                _word=cursor.getString(1);
+                _meaning=cursor.getString(2);
+            }
         }
     }
     private void nextWord(){
@@ -233,13 +206,21 @@ public class LightnerWords extends AppCompatActivity implements View.OnClickList
         }
         else{
             Toast.makeText(this, "پایان", Toast.LENGTH_SHORT).show();
+            remember.setBackgroundColor(Color.parseColor("#393838"));
+            dontRemember.setBackgroundColor(Color.parseColor("#393838"));
+            remember.setClickable(false);
+            dontRemember.setClickable(false);
         }
     }
 
     private void setCounters(){
         Cursor c=cursor;
         while (c.moveToNext()){
-            totalWordsNum++;
+            date=cursor.getString(3);
+            if(group==6)
+                totalWordsNum++;
+            else if(checkReviewDate(group))
+                totalWordsNum++;
         }
         tvCounter.setText(getPersianNum(1));
         tvTotalCounter.setText(getPersianNum(totalWordsNum));
@@ -307,5 +288,94 @@ public class LightnerWords extends AppCompatActivity implements View.OnClickList
                 tvWordGroup.setText("بایگانی");
                 break;
         }
+    }
+
+    private void changeStringDateToInt(){
+        String hold="";
+        for(int i=0;i<4;i++)
+            hold+=date.charAt(i);
+        year=Integer.parseInt(hold);
+        hold="";
+        int i;
+        for(i=5;i<7;i++){
+            if(date.charAt(i)!='-')
+                hold+=date.charAt(i);
+            else
+                break;
+        }
+        month=Integer.parseInt(hold);
+        hold="";
+        i++;
+        for(int j=i;j<date.length();j++){
+            hold+=date.charAt(j);
+        }
+        day=Integer.parseInt(hold);
+    }
+
+    private void nextDay() {
+        if (month == 12) {
+            handleEsfand();
+        } else if (day < 30) {
+            next_day++;
+        } else if (day == 30 && month < 7) {
+            next_day++;
+        } else {
+            next_day = 1;
+            next_month++;
+        }
+    }
+    private void handleEsfand() {
+        int boundaryDay = 29;
+        if (isLeapYear(year)) {
+            boundaryDay = 30;
+        }
+        if (day == boundaryDay) {
+            next_year++;
+            next_month = 1;
+            next_day = 1;
+        } else {
+            next_day++;
+        }
+    }
+    private boolean isLeapYear(int year) {
+        double a = 0.025;
+        double b = 266;
+        double leapDays0 = 0, leapDays1 = 0;
+        int frac0 = 0, frac1 = 0;
+        if (year > 0) {
+            leapDays0 = ((year + 38) % 2820)*0.24219 + a;  //0.24219 ~ extra days of one year
+            leapDays1 = ((year + 39) % 2820)*0.24219 + a;  //38 days is the difference of epoch to
+            //2820-year cycle
+        } else if (year < 0) {
+            leapDays0 = ((year + 39) % 2820)*0.24219 + a;
+            leapDays1 = ((year + 40) % 2820)*0.24219 + a;
+        } else {
+            return false;
+        }
+
+        frac0 = (int)((leapDays0 - (int)(leapDays0))*1000);
+        frac1 = (int)((leapDays1 - (int)(leapDays1))*1000);
+
+        if (frac0 <= b && frac1 > b) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private boolean checkReviewDate(int group){
+        changeStringDateToInt();
+        next_year=year;next_month=month;next_day=day;
+        for(int i=1;i<=group;i++){
+            if(cur_year==next_year && cur_month==next_month && cur_day==next_day) {
+//                Toast.makeText(this, cur_year+cur_month+cur_day+" "+next_year+next_month+next_day, Toast.LENGTH_SHORT).show();
+                return false;
+            }
+            nextDay();
+            year=next_year;
+            month=next_month;
+            day=next_day;
+        }
+        return true;
     }
 }
